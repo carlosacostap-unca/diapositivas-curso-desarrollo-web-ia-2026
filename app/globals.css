@@ -279,7 +279,7 @@ h1 {
 }
 
 .presentation { position: relative; width: 100%; overflow: hidden; }
-.slideTrack { display: flex; width: 300vw; transition: transform 650ms cubic-bezier(0.65, 0, 0.35, 1); }
+.slideTrack { display: flex; width: 400vw; transition: transform 650ms cubic-bezier(0.65, 0, 0.35, 1); }
 .slide { flex: 0 0 100vw; }
 
 .overview {
@@ -339,6 +339,26 @@ h1 {
 .instructorCard ul { grid-column: 1 / -1; display: grid; gap: .48rem; margin: 1.3rem 0 0; padding: 1rem 0 0 1.05rem; border-top: 1px solid rgba(213, 228, 232, .15); color: #bfccd2; font-size: clamp(.77rem, 1vw, .92rem); line-height: 1.43; }
 .instructorCard li::marker { color: var(--orange); }
 
+.virtualClassroom { isolation: isolate; position: relative; display: grid; grid-template-rows: auto 1fr auto; min-height: 100svh; overflow: hidden; padding: clamp(1.5rem, 3.5vw, 3.5rem) clamp(1.5rem, 6vw, 7rem); background: #fbf1e1; color: #10283a; }
+.virtualClassroom::before { content: ""; position: absolute; z-index: -2; inset: 0; background-image: linear-gradient(rgba(16, 40, 58, .07) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 40, 58, .07) 1px, transparent 1px); background-size: 4rem 4rem; mask-image: linear-gradient(145deg, transparent 5%, black 65%); }
+.classroomGlow { position: absolute; z-index: -1; width: clamp(23rem, 43vw, 43rem); aspect-ratio: 1; right: -13%; top: -28%; border-radius: 50%; background: radial-gradient(circle, rgba(255, 107, 53, .33), rgba(255, 107, 53, 0) 66%); }
+.classroomTopbar, .classroomFooter { border-color: rgba(16, 40, 58, .16); }
+.virtualClassroom .brandText, .virtualClassroom .edition, .virtualClassroom .footer { color: #557080; }
+.classroomContent { display: grid; grid-template-columns: minmax(0, 1fr) minmax(24rem, .93fr); align-items: center; gap: clamp(2rem, 8vw, 9rem); padding: clamp(1.6rem, 4vh, 3.4rem) 0; }
+.classroomIntro .eyebrow { color: #d6572a; margin-bottom: .8rem; }
+.classroomIntro h2 { margin: 0; font-size: clamp(2.6rem, 5.5vw, 5.8rem); font-weight: 650; letter-spacing: -.065em; line-height: .92; }
+.classroomIntro > p { max-width: 31rem; margin: 1.4rem 0 1.15rem; color: #4c6674; font-size: clamp(.95rem, 1.35vw, 1.1rem); line-height: 1.55; }
+.classroomUrl { display: inline-block; color: #10283a; font-family: var(--font-geist-mono), monospace; font-size: clamp(.85rem, 1.3vw, 1.05rem); font-weight: 700; text-decoration-color: var(--orange); text-decoration-thickness: 2px; text-underline-offset: .35rem; }
+.accessPanel { display: grid; grid-template-columns: minmax(9.5rem, .74fr) 1.2fr; align-items: center; gap: clamp(1rem, 2vw, 2rem); padding: clamp(1rem, 2vw, 1.55rem); border: 1px solid rgba(16, 40, 58, .17); background: rgba(255, 255, 255, .5); box-shadow: 0 1.5rem 4rem rgba(16, 40, 58, .1); }
+.qrBlock { display: grid; justify-items: center; gap: .7rem; color: #5a6e77; font-family: var(--font-geist-mono), monospace; font-size: .61rem; font-weight: 700; letter-spacing: .08em; text-align: center; text-transform: uppercase; }
+.qrBlock img, .qrPlaceholder { display: block; width: 100%; aspect-ratio: 1; background: #fffaf1; image-rendering: pixelated; }
+.accessSteps { display: grid; gap: .9rem; margin: 0; padding: 0; list-style: none; }
+.accessSteps li { display: grid; grid-template-columns: 1.55rem 1fr; column-gap: .7rem; align-items: start; }
+.accessSteps li > span { padding-top: .18rem; color: #d6572a; font-family: var(--font-geist-mono), monospace; font-size: .65rem; font-weight: 700; letter-spacing: .06em; }
+.accessSteps p { margin: 0; color: #425d6b; font-size: clamp(.81rem, 1.08vw, .96rem); line-height: 1.42; }
+.accessSteps strong { color: #10283a; }
+.accessSteps code { grid-column: 2; display: inline-block; width: fit-content; margin-top: .45rem; padding: .4rem .55rem; background: #10283a; color: #fff1dc; font-family: var(--font-geist-mono), monospace; font-size: clamp(.76rem, 1vw, .9rem); font-weight: 700; letter-spacing: .04em; }
+
 @media (max-width: 700px) {
   .overview { padding: 1.35rem 1.35rem 1.1rem; }
   .overviewLead { display: block; }
@@ -354,4 +374,11 @@ h1 {
   .instructorGrid { grid-template-columns: 1fr; gap: .7rem; margin-top: 1.25rem; }
   .instructorCard { padding: 1rem; }
   .instructorCard ul { margin-top: .9rem; padding-top: .75rem; font-size: .75rem; gap: .35rem; }
+  .virtualClassroom { padding: 1.35rem 1.35rem 1.1rem; }
+  .classroomContent { grid-template-columns: 1fr; gap: 1.3rem; padding: 1.8rem 0; }
+  .classroomIntro h2 { font-size: clamp(2.55rem, 12vw, 4.25rem); }
+  .classroomIntro > p { margin: 1rem 0; }
+  .accessPanel { grid-template-columns: 7.7rem 1fr; padding: .85rem; gap: .85rem; }
+  .accessSteps { gap: .65rem; }
+  .accessSteps p { font-size: .76rem; }
 }

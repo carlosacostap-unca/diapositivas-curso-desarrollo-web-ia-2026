@@ -1,11 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import QRCode from "qrcode";
 
-const slideCount = 3;
+const slideCount = 4;
+const virtualCampusUrl = "https://www.epixum.com";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [qrCode, setQrCode] = useState("");
   const goToSlide = (index: number) => setCurrentSlide(Math.max(0, Math.min(index, slideCount - 1)));
 
   useEffect(() => {
@@ -16,6 +19,15 @@ export default function Home() {
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [currentSlide]);
+
+  useEffect(() => {
+    QRCode.toDataURL(virtualCampusUrl, {
+      errorCorrectionLevel: "M",
+      margin: 1,
+      width: 480,
+      color: { dark: "#10283a", light: "#fffaf1" },
+    }).then(setQrCode);
+  }, []);
 
   return (
     <main className="presentation">
@@ -38,7 +50,7 @@ export default function Home() {
           </div>
           <footer className="footer">
             <p>Diseñar · Construir · Aprender</p>
-            <div className="slideNumber" aria-label="Diapositiva 1 de 3"><span>01</span><i /></div>
+            <div className="slideNumber" aria-label="Diapositiva 1 de 4"><span>01</span><i /></div>
           </footer>
         </section>
 
@@ -66,7 +78,7 @@ export default function Home() {
           </div>
           <footer className="footer overviewFooter">
             <p>Aprender haciendo</p>
-            <div className="slideNumber" aria-label="Diapositiva 2 de 3"><span>02</span><i /></div>
+            <div className="slideNumber" aria-label="Diapositiva 2 de 4"><span>02</span><i /></div>
           </footer>
         </section>
 
@@ -113,14 +125,48 @@ export default function Home() {
           </div>
           <footer className="footer instructorsFooter">
             <p>Experiencia · Formación · Acompañamiento</p>
-            <div className="slideNumber" aria-label="Diapositiva 3 de 3"><span>03</span><i /></div>
+            <div className="slideNumber" aria-label="Diapositiva 3 de 4"><span>03</span><i /></div>
+          </footer>
+        </section>
+
+        <section className="slide virtualClassroom" aria-labelledby="classroom-title">
+          <div className="classroomGlow" aria-hidden="true" />
+          <header className="topbar classroomTopbar">
+            <div className="brand" aria-label="Desarrollo web e inteligencia artificial">
+              <span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span>
+              <span className="brandText">WEB · IA</span>
+            </div>
+            <p className="edition">Aula virtual</p>
+          </header>
+          <div className="classroomContent">
+            <div className="classroomIntro">
+              <p className="eyebrow"><span />Diapositiva 04</p>
+              <h2 id="classroom-title">El aula virtual<br />nos acompaña.</h2>
+              <p>Allí encontrarás los contenidos, materiales y novedades del curso.</p>
+              <a className="classroomUrl" href={virtualCampusUrl} target="_blank" rel="noreferrer">https://www.epixum.com</a>
+            </div>
+            <div className="accessPanel">
+              <div className="qrBlock">
+                {qrCode ? <img src={qrCode} alt="Código QR para acceder al aula virtual" /> : <div className="qrPlaceholder" aria-hidden="true" />}
+                <span>Escaneá para acceder</span>
+              </div>
+              <ol className="accessSteps">
+                <li><span>01</span><p>Ingresá con tu <strong>cuenta de Google</strong>.</p></li>
+                <li><span>02</span><p>Hacé click en <strong>“Sumarme a un curso”</strong>.</p></li>
+                <li><span>03</span><p>Ingresá la clave de inscripción:</p><code>nodo-ia-2026</code></li>
+              </ol>
+            </div>
+          </div>
+          <footer className="footer classroomFooter">
+            <p>Contenidos · Materiales · Novedades</p>
+            <div className="slideNumber" aria-label="Diapositiva 4 de 4"><span>04</span><i /></div>
           </footer>
         </section>
       </div>
       <nav className="slideNavigation" aria-label="Navegación de diapositivas">
         <button type="button" onClick={() => goToSlide(currentSlide - 1)} disabled={currentSlide === 0} aria-label="Diapositiva anterior">←</button>
         <div className="slideDots" aria-label={`Diapositiva ${currentSlide + 1} de ${slideCount}`}>
-          {[0, 1, 2].map((index) => <button type="button" className={index === currentSlide ? "active" : ""} onClick={() => goToSlide(index)} aria-label={`Ir a la diapositiva ${index + 1}`} aria-current={index === currentSlide ? "true" : undefined} key={index} />)}
+          {[0, 1, 2, 3].map((index) => <button type="button" className={index === currentSlide ? "active" : ""} onClick={() => goToSlide(index)} aria-label={`Ir a la diapositiva ${index + 1}`} aria-current={index === currentSlide ? "true" : undefined} key={index} />)}
         </div>
         <button type="button" onClick={() => goToSlide(currentSlide + 1)} disabled={currentSlide === slideCount - 1} aria-label="Diapositiva siguiente">→</button>
       </nav>
