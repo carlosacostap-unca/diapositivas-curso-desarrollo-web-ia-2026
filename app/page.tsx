@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import QRCode from "qrcode";
 
-const slideCount = 6;
+const slideCount = 7;
 const virtualCampusUrl = "https://www.epixum.com";
 
 export default function Home() {
@@ -50,7 +50,7 @@ export default function Home() {
           </div>
           <footer className="footer">
             <p>Diseñar · Construir · Aprender</p>
-            <div className="slideNumber" aria-label="Diapositiva 1 de 6"><span>01</span><i /></div>
+            <div className="slideNumber" aria-label="Diapositiva 1 de 7"><span>01</span><i /></div>
           </footer>
         </section>
 
@@ -78,7 +78,7 @@ export default function Home() {
           </div>
           <footer className="footer overviewFooter">
             <p>Aprender haciendo</p>
-            <div className="slideNumber" aria-label="Diapositiva 2 de 6"><span>02</span><i /></div>
+            <div className="slideNumber" aria-label="Diapositiva 2 de 7"><span>02</span><i /></div>
           </footer>
         </section>
 
@@ -125,7 +125,7 @@ export default function Home() {
           </div>
           <footer className="footer instructorsFooter">
             <p>Experiencia · Formación · Acompañamiento</p>
-            <div className="slideNumber" aria-label="Diapositiva 3 de 6"><span>03</span><i /></div>
+            <div className="slideNumber" aria-label="Diapositiva 3 de 7"><span>03</span><i /></div>
           </footer>
         </section>
 
@@ -159,7 +159,7 @@ export default function Home() {
           </div>
           <footer className="footer classroomFooter">
             <p>Contenidos · Materiales · Novedades</p>
-            <div className="slideNumber" aria-label="Diapositiva 4 de 6"><span>04</span><i /></div>
+            <div className="slideNumber" aria-label="Diapositiva 4 de 7"><span>04</span><i /></div>
           </footer>
         </section>
 
@@ -186,7 +186,7 @@ export default function Home() {
             </ol>
             <p className="setupHelp">¿No aparece o no abre? Avisanos antes de comenzar la primera clase.</p>
           </div>
-          <footer className="footer setupFooter"><p>Chequeo previo · Visual Studio</p><div className="slideNumber" aria-label="Diapositiva 5 de 6"><span>05</span><i /></div></footer>
+          <footer className="footer setupFooter"><p>Chequeo previo · Visual Studio</p><div className="slideNumber" aria-label="Diapositiva 5 de 7"><span>05</span><i /></div></footer>
         </section>
 
         <section className="slide setupSlide openCode" aria-labelledby="opencode-title">
@@ -212,13 +212,39 @@ export default function Home() {
             </ol>
             <p className="setupHelp">Si OpenCode no aparece o no abre, avisá al equipo docente para ayudarte con la instalación.</p>
           </div>
-          <footer className="footer setupFooter"><p>Chequeo previo · OpenCode</p><div className="slideNumber" aria-label="Diapositiva 6 de 6"><span>06</span><i /></div></footer>
+          <footer className="footer setupFooter"><p>Chequeo previo · OpenCode</p><div className="slideNumber" aria-label="Diapositiva 6 de 7"><span>06</span><i /></div></footer>
+        </section>
+
+        <section className="slide setupSlide nodeJs" aria-labelledby="nodejs-title">
+          <div className="setupGlow" aria-hidden="true" />
+          <header className="topbar setupTopbar">
+            <div className="brand" aria-label="Desarrollo web e inteligencia artificial">
+              <span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span>
+              <span className="brandText">WEB · IA</span>
+            </div>
+            <p className="edition">Preparación</p>
+          </header>
+          <div className="setupContent">
+            <div className="setupLead">
+              <p className="eyebrow"><span />Diapositiva 07</p>
+              <p className="setupKicker">Comprobación de herramientas</p>
+              <h2 id="nodejs-title">¿Tenés instalado<br /><em>Node.js?</em></h2>
+              <p>Podés verificarlo desde la terminal integrada de Visual Studio Code o de OpenCode.</p>
+            </div>
+            <ol className="setupChecklist">
+              <li><span>01</span><div><h3>Abrí una terminal integrada</h3><p>Usá la terminal de <strong>Visual Studio Code</strong> o la de <strong>OpenCode</strong>.</p></div></li>
+              <li><span>02</span><div><h3>Escribí este comando</h3><code>node --version</code></div></li>
+              <li><span>03</span><div><h3>Confirmá el resultado</h3><p>Si aparece una versión que comienza con <strong>v</strong>, Node.js está listo para usar.</p></div></li>
+            </ol>
+            <p className="setupHelp">Si el comando no se reconoce, avisá al equipo docente para ayudarte con la instalación.</p>
+          </div>
+          <footer className="footer setupFooter"><p>Chequeo previo · Node.js</p><div className="slideNumber" aria-label="Diapositiva 7 de 7"><span>07</span><i /></div></footer>
         </section>
       </div>
       <nav className="slideNavigation" aria-label="Navegación de diapositivas">
         <button type="button" onClick={() => goToSlide(currentSlide - 1)} disabled={currentSlide === 0} aria-label="Diapositiva anterior">←</button>
         <div className="slideDots" aria-label={`Diapositiva ${currentSlide + 1} de ${slideCount}`}>
-          {[0, 1, 2, 3, 4, 5].map((index) => <button type="button" className={index === currentSlide ? "active" : ""} onClick={() => goToSlide(index)} aria-label={`Ir a la diapositiva ${index + 1}`} aria-current={index === currentSlide ? "true" : undefined} key={index} />)}
+          {[0, 1, 2, 3, 4, 5, 6].map((index) => <button type="button" className={index === currentSlide ? "active" : ""} onClick={() => goToSlide(index)} aria-label={`Ir a la diapositiva ${index + 1}`} aria-current={index === currentSlide ? "true" : undefined} key={index} />)}
         </div>
         <button type="button" onClick={() => goToSlide(currentSlide + 1)} disabled={currentSlide === slideCount - 1} aria-label="Diapositiva siguiente">→</button>
       </nav>
