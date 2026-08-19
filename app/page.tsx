@@ -229,12 +229,13 @@ export default function Home() {
               <p className="eyebrow"><span />Diapositiva 07</p>
               <p className="setupKicker">Comprobación de herramientas</p>
               <h2 id="nodejs-title">¿Tenés instalado<br /><em>Node.js?</em></h2>
-              <p>Podés verificarlo desde la terminal integrada de Visual Studio Code o de OpenCode.</p>
+              <p>Podés verificar Node.js y npm desde la terminal integrada de Visual Studio Code o de OpenCode.</p>
             </div>
             <ol className="setupChecklist">
               <li><span>01</span><div><h3>Abrí una terminal integrada</h3><p>Usá la terminal de <strong>Visual Studio Code</strong> o la de <strong>OpenCode</strong>.</p></div></li>
-              <li><span>02</span><div><h3>Escribí este comando</h3><code>node --version</code></div></li>
-              <li><span>03</span><div><h3>Confirmá el resultado</h3><p>Si aparece una versión que comienza con <strong>v</strong>, Node.js está listo para usar.</p></div></li>
+              <li><span>02</span><div><h3>Comprobá Node.js</h3><code>node --version</code></div></li>
+              <li><span>03</span><div><h3>Comprobá npm</h3><code>npm --version</code></div></li>
+              <li><span>04</span><div><h3>Confirmá ambos resultados</h3><p>Si cada comando muestra un número de versión, Node.js y npm están listos para usar.</p></div></li>
             </ol>
             <p className="setupHelp">Si el comando no se reconoce, avisá al equipo docente para ayudarte con la instalación.</p>
           </div>
