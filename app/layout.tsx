@@ -16,6 +16,18 @@ export const metadata: Metadata = {
   title: "Curso de Desarrollo de Aplicaciones Web Asistido por IA",
   description:
     "Presentación del Curso de Desarrollo de Aplicaciones Web Asistido por Inteligencia Artificial.",
+  metadataBase: new URL("https://curso-desarrollo-web-ia.carlosacostap.chatgpt.site"),
+  openGraph: {
+    title: "Desarrollo de Aplicaciones Web Asistido por IA",
+    description: "2 proyectos · 8 clases · 4 semanas",
+    images: ["/og.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Desarrollo de Aplicaciones Web Asistido por IA",
+    description: "2 proyectos · 8 clases · 4 semanas",
+    images: ["/og.png"],
+  },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
