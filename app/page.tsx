@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import QRCode from "qrcode";
 
-const slideCount = 8;
+const slideCount = 9;
 const virtualCampusUrl = "https://www.epixum.com";
 
 export default function Home() {
@@ -50,7 +50,7 @@ export default function Home() {
           </div>
           <footer className="footer">
             <p>Diseñar · Construir · Aprender</p>
-            <div className="slideNumber" aria-label="Diapositiva 1 de 8"><span>01</span><i /></div>
+            <div className="slideNumber" aria-label="Diapositiva 1 de 9"><span>01</span><i /></div>
           </footer>
         </section>
 
@@ -78,7 +78,7 @@ export default function Home() {
           </div>
           <footer className="footer overviewFooter">
             <p>Aprender haciendo</p>
-            <div className="slideNumber" aria-label="Diapositiva 2 de 8"><span>02</span><i /></div>
+            <div className="slideNumber" aria-label="Diapositiva 2 de 9"><span>02</span><i /></div>
           </footer>
         </section>
 
@@ -125,7 +125,7 @@ export default function Home() {
           </div>
           <footer className="footer instructorsFooter">
             <p>Experiencia · Formación · Acompañamiento</p>
-            <div className="slideNumber" aria-label="Diapositiva 3 de 8"><span>03</span><i /></div>
+            <div className="slideNumber" aria-label="Diapositiva 3 de 9"><span>03</span><i /></div>
           </footer>
         </section>
 
@@ -159,7 +159,7 @@ export default function Home() {
           </div>
           <footer className="footer classroomFooter">
             <p>Contenidos · Materiales · Novedades</p>
-            <div className="slideNumber" aria-label="Diapositiva 4 de 8"><span>04</span><i /></div>
+            <div className="slideNumber" aria-label="Diapositiva 4 de 9"><span>04</span><i /></div>
           </footer>
         </section>
 
@@ -186,7 +186,7 @@ export default function Home() {
             </ol>
             <p className="setupHelp">¿No aparece o no abre? Descargá el instalador: <a href="https://code.visualstudio.com/download" target="_blank" rel="noreferrer">https://code.visualstudio.com/download</a></p>
           </div>
-          <footer className="footer setupFooter"><p>Chequeo previo · Visual Studio Code</p><div className="slideNumber" aria-label="Diapositiva 5 de 8"><span>05</span><i /></div></footer>
+          <footer className="footer setupFooter"><p>Chequeo previo · Visual Studio Code</p><div className="slideNumber" aria-label="Diapositiva 5 de 9"><span>05</span><i /></div></footer>
         </section>
 
         <section className="slide setupSlide openCode" aria-labelledby="opencode-title">
@@ -212,7 +212,7 @@ export default function Home() {
             </ol>
             <p className="setupHelp">Si OpenCode no aparece o no abre, descargá el instalador: <a href="https://dev.opencode.ai/download" target="_blank" rel="noreferrer">https://dev.opencode.ai/download</a></p>
           </div>
-          <footer className="footer setupFooter"><p>Chequeo previo · OpenCode</p><div className="slideNumber" aria-label="Diapositiva 6 de 8"><span>06</span><i /></div></footer>
+          <footer className="footer setupFooter"><p>Chequeo previo · OpenCode</p><div className="slideNumber" aria-label="Diapositiva 6 de 9"><span>06</span><i /></div></footer>
         </section>
 
         <section className="slide setupSlide nodeJs" aria-labelledby="nodejs-title">
@@ -239,7 +239,7 @@ export default function Home() {
             </ol>
             <p className="setupHelp">Si alguno de los comandos no se reconoce, descargá el instalador: <a href="https://nodejs.org/en/download" target="_blank" rel="noreferrer">https://nodejs.org/en/download</a>. Incluye npm.</p>
           </div>
-          <footer className="footer setupFooter"><p>Chequeo previo · Node.js</p><div className="slideNumber" aria-label="Diapositiva 7 de 8"><span>07</span><i /></div></footer>
+          <footer className="footer setupFooter"><p>Chequeo previo · Node.js</p><div className="slideNumber" aria-label="Diapositiva 7 de 9"><span>07</span><i /></div></footer>
         </section>
 
         <section className="slide diagnostic" aria-labelledby="diagnostic-title">
@@ -265,7 +265,36 @@ export default function Home() {
               <li><span>05</span><p>¿Qué te gustaría poder crear o resolver cuando termine el curso?</p></li>
             </ol>
           </div>
-          <footer className="footer diagnosticFooter"><p>Tu experiencia también construye el curso</p><div className="slideNumber" aria-label="Diapositiva 8 de 8"><span>08</span><i /></div></footer>
+          <footer className="footer diagnosticFooter"><p>Tu experiencia también construye el curso</p><div className="slideNumber" aria-label="Diapositiva 8 de 9"><span>08</span><i /></div></footer>
+        </section>
+
+        <section className="slide workspace" aria-labelledby="workspace-title">
+          <div className="workspaceGlow" aria-hidden="true" />
+          <header className="topbar workspaceTopbar">
+            <div className="brand" aria-label="Desarrollo web e inteligencia artificial">
+              <span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span>
+              <span className="brandText">WEB · IA</span>
+            </div>
+            <p className="edition">Preparación</p>
+          </header>
+          <div className="workspaceContent">
+            <div className="workspaceLead">
+              <p className="eyebrow"><span />Diapositiva 09</p>
+              <p className="setupKicker">Organización del curso</p>
+              <h2 id="workspace-title">Creá tu carpeta<br />de <em>trabajo.</em></h2>
+              <p>La usaremos para guardar todos los proyectos, ejercicios y archivos que construyamos durante el curso.</p>
+            </div>
+            <div className="workspacePanel">
+              <p className="workspacePrompt">En un lugar fácil de encontrar de tu disco, por ejemplo <strong>Documentos</strong>, creá una carpeta con este nombre:</p>
+              <code>curso-desarrollo-web-ia</code>
+              <div className="workspaceSteps">
+                <span>01</span><p>Abrí el Explorador de archivos.</p>
+                <span>02</span><p>Elegí la ubicación donde guardarás tus prácticas.</p>
+                <span>03</span><p>Creá la carpeta y conservá este nombre para seguir las indicaciones del curso.</p>
+              </div>
+            </div>
+          </div>
+          <footer className="footer workspaceFooter"><p>Un lugar para cada proyecto</p><div className="slideNumber" aria-label="Diapositiva 9 de 9"><span>09</span><i /></div></footer>
         </section>
       </div>
       <nav className="slideNavigation" aria-label="Navegación de diapositivas">
