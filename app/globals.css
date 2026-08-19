@@ -279,7 +279,7 @@ h1 {
 }
 
 .presentation { position: relative; width: 100%; overflow: hidden; }
-.slideTrack { display: flex; width: 700vw; transition: transform 650ms cubic-bezier(0.65, 0, 0.35, 1); }
+.slideTrack { display: flex; width: 800vw; transition: transform 650ms cubic-bezier(0.65, 0, 0.35, 1); }
 .slide { flex: 0 0 100vw; }
 
 .overview {
@@ -384,6 +384,19 @@ h1 {
 .setupHelp { grid-column: 1 / -1; margin: 0; padding-top: .1rem; color: #a7bec5; font-size: clamp(.78rem, 1vw, .9rem); font-style: italic; }
 .setupHelp a { color: #f2f7f4; font-family: var(--font-geist-mono), monospace; font-size: .92em; font-style: normal; font-weight: 700; overflow-wrap: anywhere; text-decoration-color: var(--orange); text-decoration-thickness: 2px; text-underline-offset: .2rem; }
 
+.diagnostic { isolation: isolate; position: relative; display: grid; grid-template-rows: auto 1fr auto; min-height: 100svh; overflow: hidden; padding: clamp(1.5rem, 3.5vw, 3.5rem) clamp(1.5rem, 6vw, 7rem); background: #17363a; color: #f4f7ec; }
+.diagnostic::before { content: ""; position: absolute; z-index: -2; inset: 0; opacity: .28; background-image: linear-gradient(rgba(215, 237, 218, .28) 1px, transparent 1px), linear-gradient(90deg, rgba(215, 237, 218, .28) 1px, transparent 1px); background-size: 4.5rem 4.5rem; mask-image: linear-gradient(125deg, black, transparent 73%); }
+.diagnosticGlow { position: absolute; z-index: -1; width: clamp(22rem, 40vw, 42rem); aspect-ratio: 1; right: -9%; top: -25%; border-radius: 50%; background: radial-gradient(circle, rgba(241, 186, 77, .3), rgba(241, 186, 77, 0) 67%); }
+.diagnosticTopbar, .diagnosticFooter { border-color: rgba(239, 247, 230, .18); }
+.diagnosticContent { align-self: center; display: grid; grid-template-columns: minmax(0, .85fr) minmax(26rem, 1.15fr); gap: clamp(2.5rem, 9vw, 11rem); padding: clamp(1.8rem, 5vh, 4rem) 0; }
+.diagnosticLead h2 { margin: 0; font-size: clamp(2.5rem, 5vw, 5.45rem); font-weight: 650; letter-spacing: -.065em; line-height: .92; }
+.diagnosticLead h2 em { color: #f1ba4d; font-style: italic; font-weight: 520; }
+.diagnosticLead > p:last-child { max-width: 28rem; margin: 1.3rem 0 0; color: #c8dbd0; font-size: clamp(.92rem, 1.3vw, 1.1rem); line-height: 1.5; }
+.diagnosticQuestions { display: grid; gap: .7rem; margin: 0; padding: 0; list-style: none; }
+.diagnosticQuestions li { display: grid; grid-template-columns: 2.8rem 1fr; gap: 1rem; align-items: center; padding: clamp(.78rem, 1.35vw, 1.15rem); border: 1px solid rgba(239, 247, 230, .18); background: rgba(255, 255, 255, .055); }
+.diagnosticQuestions span { display: grid; place-items: center; width: 2.1rem; height: 2.1rem; border: 1px solid rgba(241, 186, 77, .75); border-radius: 50%; color: #f1ba4d; font-family: var(--font-geist-mono), monospace; font-size: .64rem; font-weight: 700; }
+.diagnosticQuestions p { margin: 0; color: #e6f0e9; font-size: clamp(.82rem, 1.18vw, 1rem); line-height: 1.4; }
+
 @media (max-width: 700px) {
   .overview { padding: 1.35rem 1.35rem 1.1rem; }
   .overviewLead { display: block; }
@@ -412,4 +425,10 @@ h1 {
   .setupChecklist { gap: .6rem; }
   .setupChecklist li { grid-template-columns: 2.5rem 1fr; gap: .7rem; padding: .8rem; }
   .setupChecklist p { font-size: .75rem; }
+  .diagnostic { padding: 1.35rem 1.35rem 1.1rem; }
+  .diagnosticContent { grid-template-columns: 1fr; gap: 1.3rem; padding: 1.8rem 0; }
+  .diagnosticLead h2 { font-size: clamp(2.5rem, 12vw, 4.2rem); }
+  .diagnosticQuestions { gap: .55rem; }
+  .diagnosticQuestions li { grid-template-columns: 2.45rem 1fr; gap: .65rem; padding: .72rem; }
+  .diagnosticQuestions p { font-size: .75rem; }
 }

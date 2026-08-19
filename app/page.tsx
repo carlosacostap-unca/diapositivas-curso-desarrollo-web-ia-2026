@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import QRCode from "qrcode";
 
-const slideCount = 7;
+const slideCount = 8;
 const virtualCampusUrl = "https://www.epixum.com";
 
 export default function Home() {
@@ -50,7 +50,7 @@ export default function Home() {
           </div>
           <footer className="footer">
             <p>Diseñar · Construir · Aprender</p>
-            <div className="slideNumber" aria-label="Diapositiva 1 de 7"><span>01</span><i /></div>
+            <div className="slideNumber" aria-label="Diapositiva 1 de 8"><span>01</span><i /></div>
           </footer>
         </section>
 
@@ -78,7 +78,7 @@ export default function Home() {
           </div>
           <footer className="footer overviewFooter">
             <p>Aprender haciendo</p>
-            <div className="slideNumber" aria-label="Diapositiva 2 de 7"><span>02</span><i /></div>
+            <div className="slideNumber" aria-label="Diapositiva 2 de 8"><span>02</span><i /></div>
           </footer>
         </section>
 
@@ -125,7 +125,7 @@ export default function Home() {
           </div>
           <footer className="footer instructorsFooter">
             <p>Experiencia · Formación · Acompañamiento</p>
-            <div className="slideNumber" aria-label="Diapositiva 3 de 7"><span>03</span><i /></div>
+            <div className="slideNumber" aria-label="Diapositiva 3 de 8"><span>03</span><i /></div>
           </footer>
         </section>
 
@@ -159,7 +159,7 @@ export default function Home() {
           </div>
           <footer className="footer classroomFooter">
             <p>Contenidos · Materiales · Novedades</p>
-            <div className="slideNumber" aria-label="Diapositiva 4 de 7"><span>04</span><i /></div>
+            <div className="slideNumber" aria-label="Diapositiva 4 de 8"><span>04</span><i /></div>
           </footer>
         </section>
 
@@ -186,7 +186,7 @@ export default function Home() {
             </ol>
             <p className="setupHelp">¿No aparece o no abre? Descargá el instalador: <a href="https://code.visualstudio.com/download" target="_blank" rel="noreferrer">https://code.visualstudio.com/download</a></p>
           </div>
-          <footer className="footer setupFooter"><p>Chequeo previo · Visual Studio Code</p><div className="slideNumber" aria-label="Diapositiva 5 de 7"><span>05</span><i /></div></footer>
+          <footer className="footer setupFooter"><p>Chequeo previo · Visual Studio Code</p><div className="slideNumber" aria-label="Diapositiva 5 de 8"><span>05</span><i /></div></footer>
         </section>
 
         <section className="slide setupSlide openCode" aria-labelledby="opencode-title">
@@ -212,7 +212,7 @@ export default function Home() {
             </ol>
             <p className="setupHelp">Si OpenCode no aparece o no abre, descargá el instalador: <a href="https://dev.opencode.ai/download" target="_blank" rel="noreferrer">https://dev.opencode.ai/download</a></p>
           </div>
-          <footer className="footer setupFooter"><p>Chequeo previo · OpenCode</p><div className="slideNumber" aria-label="Diapositiva 6 de 7"><span>06</span><i /></div></footer>
+          <footer className="footer setupFooter"><p>Chequeo previo · OpenCode</p><div className="slideNumber" aria-label="Diapositiva 6 de 8"><span>06</span><i /></div></footer>
         </section>
 
         <section className="slide setupSlide nodeJs" aria-labelledby="nodejs-title">
@@ -239,13 +239,39 @@ export default function Home() {
             </ol>
             <p className="setupHelp">Si alguno de los comandos no se reconoce, descargá el instalador: <a href="https://nodejs.org/en/download" target="_blank" rel="noreferrer">https://nodejs.org/en/download</a>. Incluye npm.</p>
           </div>
-          <footer className="footer setupFooter"><p>Chequeo previo · Node.js</p><div className="slideNumber" aria-label="Diapositiva 7 de 7"><span>07</span><i /></div></footer>
+          <footer className="footer setupFooter"><p>Chequeo previo · Node.js</p><div className="slideNumber" aria-label="Diapositiva 7 de 8"><span>07</span><i /></div></footer>
+        </section>
+
+        <section className="slide diagnostic" aria-labelledby="diagnostic-title">
+          <div className="diagnosticGlow" aria-hidden="true" />
+          <header className="topbar diagnosticTopbar">
+            <div className="brand" aria-label="Desarrollo web e inteligencia artificial">
+              <span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span>
+              <span className="brandText">WEB · IA</span>
+            </div>
+            <p className="edition">Punto de partida</p>
+          </header>
+          <div className="diagnosticContent">
+            <div className="diagnosticLead">
+              <p className="eyebrow"><span />Diapositiva 08</p>
+              <h2 id="diagnostic-title">Antes de comenzar,<br /><em>conozcámonos.</em></h2>
+              <p>No es una evaluación: estas preguntas nos ayudan a acompañarte mejor durante el curso.</p>
+            </div>
+            <ol className="diagnosticQuestions">
+              <li><span>01</span><p>¿Tuviste alguna experiencia previa programando? ¿Con qué lenguaje o herramienta?</p></li>
+              <li><span>02</span><p>¿Creaste alguna vez una página web, una app o un proyecto digital?</p></li>
+              <li><span>03</span><p>¿Qué tan cómodo/a te sentís usando Visual Studio Code, OpenCode o una terminal?</p></li>
+              <li><span>04</span><p>¿Ya usaste herramientas de inteligencia artificial para estudiar, trabajar o programar?</p></li>
+              <li><span>05</span><p>¿Qué te gustaría poder crear o resolver cuando termine el curso?</p></li>
+            </ol>
+          </div>
+          <footer className="footer diagnosticFooter"><p>Tu experiencia también construye el curso</p><div className="slideNumber" aria-label="Diapositiva 8 de 8"><span>08</span><i /></div></footer>
         </section>
       </div>
       <nav className="slideNavigation" aria-label="Navegación de diapositivas">
         <button type="button" onClick={() => goToSlide(currentSlide - 1)} disabled={currentSlide === 0} aria-label="Diapositiva anterior">←</button>
         <div className="slideDots" aria-label={`Diapositiva ${currentSlide + 1} de ${slideCount}`}>
-          {[0, 1, 2, 3, 4, 5, 6].map((index) => <button type="button" className={index === currentSlide ? "active" : ""} onClick={() => goToSlide(index)} aria-label={`Ir a la diapositiva ${index + 1}`} aria-current={index === currentSlide ? "true" : undefined} key={index} />)}
+          {Array.from({ length: slideCount }, (_, index) => <button type="button" className={index === currentSlide ? "active" : ""} onClick={() => goToSlide(index)} aria-label={`Ir a la diapositiva ${index + 1}`} aria-current={index === currentSlide ? "true" : undefined} key={index} />)}
         </div>
         <button type="button" onClick={() => goToSlide(currentSlide + 1)} disabled={currentSlide === slideCount - 1} aria-label="Diapositiva siguiente">→</button>
       </nav>
