@@ -279,7 +279,7 @@ h1 {
 }
 
 .presentation { position: relative; width: 100%; overflow: hidden; }
-.slideTrack { display: flex; width: 400vw; transition: transform 650ms cubic-bezier(0.65, 0, 0.35, 1); }
+.slideTrack { display: flex; width: 600vw; transition: transform 650ms cubic-bezier(0.65, 0, 0.35, 1); }
 .slide { flex: 0 0 100vw; }
 
 .overview {
@@ -359,6 +359,28 @@ h1 {
 .accessSteps strong { color: #10283a; }
 .accessSteps code { grid-column: 2; display: inline-block; width: fit-content; margin-top: .45rem; padding: .4rem .55rem; background: #10283a; color: #fff1dc; font-family: var(--font-geist-mono), monospace; font-size: clamp(.76rem, 1vw, .9rem); font-weight: 700; letter-spacing: .04em; }
 
+.setupSlide { isolation: isolate; position: relative; display: grid; grid-template-rows: auto 1fr auto; min-height: 100svh; overflow: hidden; padding: clamp(1.5rem, 3.5vw, 3.5rem) clamp(1.5rem, 6vw, 7rem); color: #edf8f2; }
+.visualStudio { background: #14233f; }
+.openCode { background: #102a2a; }
+.setupSlide::before { content: ""; position: absolute; z-index: -2; inset: 0; opacity: .18; background-image: linear-gradient(rgba(229, 255, 246, .35) 1px, transparent 1px), linear-gradient(90deg, rgba(229, 255, 246, .35) 1px, transparent 1px); background-size: 4rem 4rem; mask-image: linear-gradient(120deg, transparent 5%, black 70%); }
+.setupGlow { position: absolute; z-index: -1; width: clamp(25rem, 43vw, 43rem); aspect-ratio: 1; right: -13%; top: -24%; border-radius: 50%; background: radial-gradient(circle, rgba(255, 107, 53, .23), rgba(255, 107, 53, 0) 66%); }
+.openCode .setupGlow { background: radial-gradient(circle, rgba(84, 215, 166, .2), rgba(84, 215, 166, 0) 66%); }
+.setupTopbar, .setupFooter { border-color: rgba(237, 248, 242, .17); }
+.setupContent { align-self: center; display: grid; grid-template-columns: minmax(0, .9fr) minmax(25rem, 1.1fr); column-gap: clamp(2.5rem, 9vw, 11rem); row-gap: 1.5rem; padding: clamp(1.8rem, 5vh, 4rem) 0; }
+.setupLead .eyebrow { margin-bottom: .65rem; }
+.setupKicker { margin: 0 0 1.1rem; color: #a4bac2; font-family: var(--font-geist-mono), monospace; font-size: .67rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+.setupLead h2 { margin: 0; font-size: clamp(2.5rem, 5vw, 5.5rem); font-weight: 650; letter-spacing: -.065em; line-height: .92; }
+.setupLead h2 em { color: var(--orange); font-style: italic; font-weight: 520; }
+.setupLead > p:last-child { max-width: 27rem; margin: 1.3rem 0 0; color: #b4c9cf; font-size: clamp(.92rem, 1.3vw, 1.1rem); line-height: 1.5; }
+.setupChecklist { display: grid; gap: .85rem; margin: 0; padding: 0; list-style: none; }
+.setupChecklist li { display: grid; grid-template-columns: 2.8rem 1fr; gap: 1rem; padding: clamp(1rem, 1.6vw, 1.35rem); border: 1px solid rgba(237, 248, 242, .17); background: rgba(255, 255, 255, .05); }
+.setupChecklist li > span { display: grid; place-items: center; align-self: start; width: 2.25rem; height: 2.25rem; border: 1px solid rgba(255, 107, 53, .7); border-radius: 50%; color: var(--orange); font-family: var(--font-geist-mono), monospace; font-size: .65rem; font-weight: 700; }
+.setupChecklist h3 { margin: .1rem 0 .35rem; font-size: clamp(1rem, 1.35vw, 1.25rem); letter-spacing: -.03em; }
+.setupChecklist p { margin: 0; color: #b5cbd1; font-size: clamp(.79rem, 1.05vw, .94rem); line-height: 1.45; }
+.setupChecklist strong { color: #f2f7f4; }
+.setupChecklist code { display: inline-block; margin-top: .25rem; padding: .52rem .65rem; background: rgba(0, 0, 0, .38); color: #87e0c3; font-family: var(--font-geist-mono), monospace; font-size: clamp(.8rem, 1.2vw, 1rem); font-weight: 700; }
+.setupHelp { grid-column: 1 / -1; margin: 0; padding-top: .1rem; color: #a7bec5; font-size: clamp(.78rem, 1vw, .9rem); font-style: italic; }
+
 @media (max-width: 700px) {
   .overview { padding: 1.35rem 1.35rem 1.1rem; }
   .overviewLead { display: block; }
@@ -381,4 +403,10 @@ h1 {
   .accessPanel { grid-template-columns: 7.7rem 1fr; padding: .85rem; gap: .85rem; }
   .accessSteps { gap: .65rem; }
   .accessSteps p { font-size: .76rem; }
+  .setupSlide { padding: 1.35rem 1.35rem 1.1rem; }
+  .setupContent { grid-template-columns: 1fr; gap: 1.35rem; padding: 1.8rem 0; }
+  .setupLead h2 { font-size: clamp(2.5rem, 12vw, 4.2rem); }
+  .setupChecklist { gap: .6rem; }
+  .setupChecklist li { grid-template-columns: 2.5rem 1fr; gap: .7rem; padding: .8rem; }
+  .setupChecklist p { font-size: .75rem; }
 }

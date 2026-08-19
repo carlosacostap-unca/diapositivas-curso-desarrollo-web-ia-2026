@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import QRCode from "qrcode";
 
-const slideCount = 4;
+const slideCount = 6;
 const virtualCampusUrl = "https://www.epixum.com";
 
 export default function Home() {
@@ -50,7 +50,7 @@ export default function Home() {
           </div>
           <footer className="footer">
             <p>Diseñar · Construir · Aprender</p>
-            <div className="slideNumber" aria-label="Diapositiva 1 de 4"><span>01</span><i /></div>
+            <div className="slideNumber" aria-label="Diapositiva 1 de 6"><span>01</span><i /></div>
           </footer>
         </section>
 
@@ -78,7 +78,7 @@ export default function Home() {
           </div>
           <footer className="footer overviewFooter">
             <p>Aprender haciendo</p>
-            <div className="slideNumber" aria-label="Diapositiva 2 de 4"><span>02</span><i /></div>
+            <div className="slideNumber" aria-label="Diapositiva 2 de 6"><span>02</span><i /></div>
           </footer>
         </section>
 
@@ -125,7 +125,7 @@ export default function Home() {
           </div>
           <footer className="footer instructorsFooter">
             <p>Experiencia · Formación · Acompañamiento</p>
-            <div className="slideNumber" aria-label="Diapositiva 3 de 4"><span>03</span><i /></div>
+            <div className="slideNumber" aria-label="Diapositiva 3 de 6"><span>03</span><i /></div>
           </footer>
         </section>
 
@@ -159,14 +159,66 @@ export default function Home() {
           </div>
           <footer className="footer classroomFooter">
             <p>Contenidos · Materiales · Novedades</p>
-            <div className="slideNumber" aria-label="Diapositiva 4 de 4"><span>04</span><i /></div>
+            <div className="slideNumber" aria-label="Diapositiva 4 de 6"><span>04</span><i /></div>
           </footer>
+        </section>
+
+        <section className="slide setupSlide visualStudio" aria-labelledby="visual-studio-title">
+          <div className="setupGlow" aria-hidden="true" />
+          <header className="topbar setupTopbar">
+            <div className="brand" aria-label="Desarrollo web e inteligencia artificial">
+              <span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span>
+              <span className="brandText">WEB · IA</span>
+            </div>
+            <p className="edition">Preparación</p>
+          </header>
+          <div className="setupContent">
+            <div className="setupLead">
+              <p className="eyebrow"><span />Diapositiva 05</p>
+              <p className="setupKicker">Comprobación de herramientas</p>
+              <h2 id="visual-studio-title">¿Tenés instalado<br /><em>Visual Studio?</em></h2>
+              <p>Verifiquémoslo antes de comenzar el curso.</p>
+            </div>
+            <ol className="setupChecklist">
+              <li><span>01</span><div><h3>Buscalo en Inicio</h3><p>Abrí el menú de inicio de Windows y escribí <strong>Visual Studio</strong>.</p></div></li>
+              <li><span>02</span><div><h3>Abrilo</h3><p>Confirmá que podés llegar a la pantalla de inicio sin errores.</p></div></li>
+              <li><span>03</span><div><h3>Revisá la versión</h3><p>En <strong>Ayuda › Acerca de Microsoft Visual Studio</strong> podés comprobar que está instalado.</p></div></li>
+            </ol>
+            <p className="setupHelp">¿No aparece o no abre? Avisanos antes de comenzar la primera clase.</p>
+          </div>
+          <footer className="footer setupFooter"><p>Chequeo previo · Visual Studio</p><div className="slideNumber" aria-label="Diapositiva 5 de 6"><span>05</span><i /></div></footer>
+        </section>
+
+        <section className="slide setupSlide openCode" aria-labelledby="opencode-title">
+          <div className="setupGlow" aria-hidden="true" />
+          <header className="topbar setupTopbar">
+            <div className="brand" aria-label="Desarrollo web e inteligencia artificial">
+              <span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span>
+              <span className="brandText">WEB · IA</span>
+            </div>
+            <p className="edition">Preparación</p>
+          </header>
+          <div className="setupContent">
+            <div className="setupLead">
+              <p className="eyebrow"><span />Diapositiva 06</p>
+              <p className="setupKicker">Comprobación de herramientas</p>
+              <h2 id="opencode-title">¿Tenés instalado<br /><em>OpenCode?</em></h2>
+              <p>Hagamos una comprobación rápida desde la terminal.</p>
+            </div>
+            <ol className="setupChecklist">
+              <li><span>01</span><div><h3>Abrí una terminal</h3><p>Podés usar PowerShell o la terminal de Windows.</p></div></li>
+              <li><span>02</span><div><h3>Escribí este comando</h3><code>opencode --version</code></div></li>
+              <li><span>03</span><div><h3>Confirmá el resultado</h3><p>Si aparece un número de versión, OpenCode ya está listo para usar.</p></div></li>
+            </ol>
+            <p className="setupHelp">Si el comando no se reconoce, avisá al equipo docente para ayudarte con la instalación.</p>
+          </div>
+          <footer className="footer setupFooter"><p>Chequeo previo · OpenCode</p><div className="slideNumber" aria-label="Diapositiva 6 de 6"><span>06</span><i /></div></footer>
         </section>
       </div>
       <nav className="slideNavigation" aria-label="Navegación de diapositivas">
         <button type="button" onClick={() => goToSlide(currentSlide - 1)} disabled={currentSlide === 0} aria-label="Diapositiva anterior">←</button>
         <div className="slideDots" aria-label={`Diapositiva ${currentSlide + 1} de ${slideCount}`}>
-          {[0, 1, 2, 3].map((index) => <button type="button" className={index === currentSlide ? "active" : ""} onClick={() => goToSlide(index)} aria-label={`Ir a la diapositiva ${index + 1}`} aria-current={index === currentSlide ? "true" : undefined} key={index} />)}
+          {[0, 1, 2, 3, 4, 5].map((index) => <button type="button" className={index === currentSlide ? "active" : ""} onClick={() => goToSlide(index)} aria-label={`Ir a la diapositiva ${index + 1}`} aria-current={index === currentSlide ? "true" : undefined} key={index} />)}
         </div>
         <button type="button" onClick={() => goToSlide(currentSlide + 1)} disabled={currentSlide === slideCount - 1} aria-label="Diapositiva siguiente">→</button>
       </nav>
