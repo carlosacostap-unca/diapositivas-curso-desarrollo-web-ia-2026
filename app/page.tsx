@@ -203,14 +203,14 @@ export default function Home() {
               <p className="eyebrow"><span />Diapositiva 06</p>
               <p className="setupKicker">Comprobación de herramientas</p>
               <h2 id="opencode-title">¿Tenés instalado<br /><em>OpenCode?</em></h2>
-              <p>Hagamos una comprobación rápida desde la terminal.</p>
+              <p>Verifiquemos que tenés instalada la aplicación de escritorio antes de comenzar.</p>
             </div>
             <ol className="setupChecklist">
-              <li><span>01</span><div><h3>Abrí una terminal</h3><p>Podés usar PowerShell o la terminal de Windows.</p></div></li>
-              <li><span>02</span><div><h3>Escribí este comando</h3><code>opencode --version</code></div></li>
-              <li><span>03</span><div><h3>Confirmá el resultado</h3><p>Si aparece un número de versión, OpenCode ya está listo para usar.</p></div></li>
+              <li><span>01</span><div><h3>Buscalo en Inicio</h3><p>Abrí el menú de inicio de Windows y escribí <strong>OpenCode</strong>.</p></div></li>
+              <li><span>02</span><div><h3>Abrí la aplicación</h3><p>Seleccioná OpenCode para iniciar su versión de escritorio.</p></div></li>
+              <li><span>03</span><div><h3>Confirmá la pantalla inicial</h3><p>Si se abre la ventana de OpenCode, ya está listo para usar durante el curso.</p></div></li>
             </ol>
-            <p className="setupHelp">Si el comando no se reconoce, avisá al equipo docente para ayudarte con la instalación.</p>
+            <p className="setupHelp">Si OpenCode no aparece o no abre, avisá al equipo docente para ayudarte con la instalación.</p>
           </div>
           <footer className="footer setupFooter"><p>Chequeo previo · OpenCode</p><div className="slideNumber" aria-label="Diapositiva 6 de 6"><span>06</span><i /></div></footer>
         </section>
