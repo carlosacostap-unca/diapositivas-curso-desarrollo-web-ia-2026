@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const slideCount = 2;
+const slideCount = 3;
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -38,7 +38,7 @@ export default function Home() {
           </div>
           <footer className="footer">
             <p>Diseñar · Construir · Aprender</p>
-            <div className="slideNumber" aria-label="Diapositiva 1 de 2"><span>01</span><i /></div>
+            <div className="slideNumber" aria-label="Diapositiva 1 de 3"><span>01</span><i /></div>
           </footer>
         </section>
 
@@ -66,14 +66,61 @@ export default function Home() {
           </div>
           <footer className="footer overviewFooter">
             <p>Aprender haciendo</p>
-            <div className="slideNumber" aria-label="Diapositiva 2 de 2"><span>02</span><i /></div>
+            <div className="slideNumber" aria-label="Diapositiva 2 de 3"><span>02</span><i /></div>
+          </footer>
+        </section>
+
+        <section className="slide instructors" aria-labelledby="instructors-title">
+          <div className="instructorOrb orbOne" aria-hidden="true" />
+          <div className="instructorOrb orbTwo" aria-hidden="true" />
+          <header className="topbar instructorsTopbar">
+            <div className="brand" aria-label="Desarrollo web e inteligencia artificial">
+              <span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span>
+              <span className="brandText">WEB · IA</span>
+            </div>
+            <p className="edition">Equipo docente</p>
+          </header>
+          <div className="instructorsContent">
+            <p className="eyebrow"><span />Diapositiva 03</p>
+            <h2 id="instructors-title">¿Quiénes son los Instructores?</h2>
+            <div className="instructorGrid">
+              <article className="instructorCard">
+                <div className="initials" aria-hidden="true">DM</div>
+                <div>
+                  <p className="instructorRole">Instructor</p>
+                  <h3>Daniel Maldonado</h3>
+                  <p className="credential">Ingeniero en Sistemas de Información <span>(UTN-FRC)</span></p>
+                </div>
+                <ul>
+                  <li>Docente en el Instituto San Martín.</li>
+                  <li>Agente Profesional Informático en ARCAT.</li>
+                  <li>Instructor en la Diplomatura en Desarrollo Web Fullstack en Nodo Tecnológico y Facultad de Tecnología y Ciencias Aplicadas de la UNCA.</li>
+                </ul>
+              </article>
+              <article className="instructorCard instructorCardAccent">
+                <div className="initials" aria-hidden="true">CA</div>
+                <div>
+                  <p className="instructorRole">Instructor</p>
+                  <h3>Carlos Acosta Parra</h3>
+                  <p className="credential">Ingeniero en Informática <span>(UNCA)</span><br />Magister en Ingeniería de Software <span>(UNSL)</span></p>
+                </div>
+                <ul>
+                  <li>Docente e Investigador en la Facultad de Tecnología y Ciencias Aplicadas de la UNCA.</li>
+                  <li>Instructor en la Diplomatura en Desarrollo Web Fullstack en Nodo Tecnológico y Facultad de Tecnología y Ciencias Aplicadas de la UNCA.</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+          <footer className="footer instructorsFooter">
+            <p>Experiencia · Formación · Acompañamiento</p>
+            <div className="slideNumber" aria-label="Diapositiva 3 de 3"><span>03</span><i /></div>
           </footer>
         </section>
       </div>
       <nav className="slideNavigation" aria-label="Navegación de diapositivas">
         <button type="button" onClick={() => goToSlide(currentSlide - 1)} disabled={currentSlide === 0} aria-label="Diapositiva anterior">←</button>
         <div className="slideDots" aria-label={`Diapositiva ${currentSlide + 1} de ${slideCount}`}>
-          {[0, 1].map((index) => <button type="button" className={index === currentSlide ? "active" : ""} onClick={() => goToSlide(index)} aria-label={`Ir a la diapositiva ${index + 1}`} aria-current={index === currentSlide ? "true" : undefined} key={index} />)}
+          {[0, 1, 2].map((index) => <button type="button" className={index === currentSlide ? "active" : ""} onClick={() => goToSlide(index)} aria-label={`Ir a la diapositiva ${index + 1}`} aria-current={index === currentSlide ? "true" : undefined} key={index} />)}
         </div>
         <button type="button" onClick={() => goToSlide(currentSlide + 1)} disabled={currentSlide === slideCount - 1} aria-label="Diapositiva siguiente">→</button>
       </nav>

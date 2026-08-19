@@ -279,7 +279,7 @@ h1 {
 }
 
 .presentation { position: relative; width: 100%; overflow: hidden; }
-.slideTrack { display: flex; width: 200vw; transition: transform 650ms cubic-bezier(0.65, 0, 0.35, 1); }
+.slideTrack { display: flex; width: 300vw; transition: transform 650ms cubic-bezier(0.65, 0, 0.35, 1); }
 .slide { flex: 0 0 100vw; }
 
 .overview {
@@ -315,6 +315,30 @@ h1 {
 .slideDots button { width: .42rem; height: .42rem; padding: 0; border-radius: 50%; background: rgba(245, 241, 232, .34); transition: width 180ms ease, border-radius 180ms ease, background-color 180ms ease; }
 .slideDots button.active { width: 1.1rem; border-radius: 99px; background: var(--orange); }
 
+.instructors {
+  isolation: isolate; position: relative; display: grid; grid-template-rows: auto 1fr auto;
+  min-height: 100svh; overflow: hidden; padding: clamp(1.5rem, 3.5vw, 3.5rem) clamp(1.5rem, 6vw, 7rem);
+  background: #0b1b2a; color: #f5f1e8;
+}
+.instructors::before { content: ""; position: absolute; z-index: -2; inset: 0; opacity: .42; background-image: radial-gradient(circle at 1px 1px, rgba(147, 200, 216, .28) 1px, transparent 0); background-size: 1.35rem 1.35rem; mask-image: linear-gradient(130deg, black, transparent 70%); }
+.instructorsTopbar, .instructorsFooter { border-color: rgba(227, 235, 237, .16); }
+.instructorOrb { position: absolute; z-index: -1; border-radius: 50%; pointer-events: none; }
+.orbOne { width: clamp(22rem, 40vw, 38rem); aspect-ratio: 1; right: -12%; bottom: -38%; border: 1px solid rgba(255, 107, 53, .38); box-shadow: 0 0 0 4rem rgba(255, 107, 53, .04), 0 0 7rem rgba(255, 107, 53, .12); }
+.orbTwo { width: 15rem; height: 15rem; left: -7rem; top: 24%; background: rgba(16, 124, 150, .17); filter: blur(28px); }
+.instructorsContent { align-self: center; padding: clamp(1.6rem, 3vh, 3rem) 0; }
+.instructorsContent > .eyebrow { margin-bottom: .8rem; }
+.instructorsContent h2 { margin: 0; max-width: 17ch; font-size: clamp(2.4rem, 5vw, 5.2rem); font-weight: 650; letter-spacing: -.06em; line-height: .95; }
+.instructorGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 2rem); margin-top: clamp(1.5rem, 3.5vh, 2.65rem); }
+.instructorCard { display: grid; grid-template-columns: auto 1fr; column-gap: 1rem; padding: clamp(1.2rem, 2.1vw, 1.8rem); border: 1px solid rgba(213, 228, 232, .19); background: rgba(255, 255, 255, .045); backdrop-filter: blur(8px); }
+.instructorCardAccent { border-color: rgba(255, 107, 53, .47); background: linear-gradient(140deg, rgba(255, 107, 53, .13), rgba(255, 255, 255, .04)); }
+.initials { display: grid; place-items: center; width: clamp(3rem, 4.5vw, 4.1rem); height: clamp(3rem, 4.5vw, 4.1rem); border: 1px solid rgba(255, 107, 53, .66); border-radius: 50%; color: var(--orange); font-family: var(--font-geist-mono), monospace; font-size: clamp(.76rem, 1vw, .94rem); font-weight: 700; letter-spacing: .08em; }
+.instructorRole { margin: .15rem 0 .45rem; color: #9ab1bc; font-family: var(--font-geist-mono), monospace; font-size: .64rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+.instructorCard h3 { margin: 0; font-size: clamp(1.35rem, 2vw, 2rem); letter-spacing: -.045em; line-height: 1; }
+.credential { margin: .65rem 0 0; color: #c3d1d7; font-size: clamp(.78rem, 1vw, .93rem); line-height: 1.4; }
+.credential span { color: #ff8b63; }
+.instructorCard ul { grid-column: 1 / -1; display: grid; gap: .48rem; margin: 1.3rem 0 0; padding: 1rem 0 0 1.05rem; border-top: 1px solid rgba(213, 228, 232, .15); color: #bfccd2; font-size: clamp(.77rem, 1vw, .92rem); line-height: 1.43; }
+.instructorCard li::marker { color: var(--orange); }
+
 @media (max-width: 700px) {
   .overview { padding: 1.35rem 1.35rem 1.1rem; }
   .overviewLead { display: block; }
@@ -325,4 +349,9 @@ h1 {
   .overviewCard h3 { margin-top: .55rem; }
   .courseFacts { flex-wrap: wrap; gap: .5rem 1.15rem; margin-top: 1.2rem; }
   .slideNavigation { right: 1rem; bottom: .85rem; }
+  .instructors { padding: 1.35rem 1.35rem 1.1rem; }
+  .instructorsContent h2 { font-size: clamp(2.4rem, 11vw, 4rem); }
+  .instructorGrid { grid-template-columns: 1fr; gap: .7rem; margin-top: 1.25rem; }
+  .instructorCard { padding: 1rem; }
+  .instructorCard ul { margin-top: .9rem; padding-top: .75rem; font-size: .75rem; gap: .35rem; }
 }
