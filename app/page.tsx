@@ -176,17 +176,17 @@ export default function Home() {
             <div className="setupLead">
               <p className="eyebrow"><span />Diapositiva 05</p>
               <p className="setupKicker">Comprobación de herramientas</p>
-              <h2 id="visual-studio-title">¿Tenés instalado<br /><em>Visual Studio?</em></h2>
+              <h2 id="visual-studio-title">¿Tenés instalado<br /><em>Visual Studio Code?</em></h2>
               <p>Verifiquémoslo antes de comenzar el curso.</p>
             </div>
             <ol className="setupChecklist">
-              <li><span>01</span><div><h3>Buscalo en Inicio</h3><p>Abrí el menú de inicio de Windows y escribí <strong>Visual Studio</strong>.</p></div></li>
+              <li><span>01</span><div><h3>Buscalo en Inicio</h3><p>Abrí el menú de inicio de Windows y escribí <strong>Visual Studio Code</strong>.</p></div></li>
               <li><span>02</span><div><h3>Abrilo</h3><p>Confirmá que podés llegar a la pantalla de inicio sin errores.</p></div></li>
-              <li><span>03</span><div><h3>Revisá la versión</h3><p>En <strong>Ayuda › Acerca de Microsoft Visual Studio</strong> podés comprobar que está instalado.</p></div></li>
+              <li><span>03</span><div><h3>Revisá la versión</h3><p>En <strong>Ayuda › Acerca de Visual Studio Code</strong> podés comprobar que está instalado.</p></div></li>
             </ol>
-            <p className="setupHelp">¿No aparece o no abre? Avisanos antes de comenzar la primera clase.</p>
+            <p className="setupHelp">¿No aparece o no abre? Descargá el instalador desde <a href="https://code.visualstudio.com/download" target="_blank" rel="noreferrer">Visual Studio Code</a>.</p>
           </div>
-          <footer className="footer setupFooter"><p>Chequeo previo · Visual Studio</p><div className="slideNumber" aria-label="Diapositiva 5 de 7"><span>05</span><i /></div></footer>
+          <footer className="footer setupFooter"><p>Chequeo previo · Visual Studio Code</p><div className="slideNumber" aria-label="Diapositiva 5 de 7"><span>05</span><i /></div></footer>
         </section>
 
         <section className="slide setupSlide openCode" aria-labelledby="opencode-title">
@@ -210,7 +210,7 @@ export default function Home() {
               <li><span>02</span><div><h3>Abrí la aplicación</h3><p>Seleccioná OpenCode para iniciar su versión de escritorio.</p></div></li>
               <li><span>03</span><div><h3>Confirmá la pantalla inicial</h3><p>Si se abre la ventana de OpenCode, ya está listo para usar durante el curso.</p></div></li>
             </ol>
-            <p className="setupHelp">Si OpenCode no aparece o no abre, avisá al equipo docente para ayudarte con la instalación.</p>
+            <p className="setupHelp">Si OpenCode no aparece o no abre, descargá el instalador desde <a href="https://dev.opencode.ai/download" target="_blank" rel="noreferrer">OpenCode Desktop</a>.</p>
           </div>
           <footer className="footer setupFooter"><p>Chequeo previo · OpenCode</p><div className="slideNumber" aria-label="Diapositiva 6 de 7"><span>06</span><i /></div></footer>
         </section>
@@ -237,7 +237,7 @@ export default function Home() {
               <li><span>03</span><div><h3>Comprobá npm</h3><code>npm --version</code></div></li>
               <li><span>04</span><div><h3>Confirmá ambos resultados</h3><p>Si cada comando muestra un número de versión, Node.js y npm están listos para usar.</p></div></li>
             </ol>
-            <p className="setupHelp">Si el comando no se reconoce, avisá al equipo docente para ayudarte con la instalación.</p>
+            <p className="setupHelp">Si alguno de los comandos no se reconoce, descargá el instalador desde <a href="https://nodejs.org/en/download" target="_blank" rel="noreferrer">Node.js</a>. El instalador incluye npm.</p>
           </div>
           <footer className="footer setupFooter"><p>Chequeo previo · Node.js</p><div className="slideNumber" aria-label="Diapositiva 7 de 7"><span>07</span><i /></div></footer>
         </section>

@@ -382,6 +382,7 @@ h1 {
 .setupChecklist strong { color: #f2f7f4; }
 .setupChecklist code { display: inline-block; margin-top: .25rem; padding: .52rem .65rem; background: rgba(0, 0, 0, .38); color: #87e0c3; font-family: var(--font-geist-mono), monospace; font-size: clamp(.8rem, 1.2vw, 1rem); font-weight: 700; }
 .setupHelp { grid-column: 1 / -1; margin: 0; padding-top: .1rem; color: #a7bec5; font-size: clamp(.78rem, 1vw, .9rem); font-style: italic; }
+.setupHelp a { color: #f2f7f4; font-weight: 700; text-decoration-color: var(--orange); text-decoration-thickness: 2px; text-underline-offset: .2rem; }
 
 @media (max-width: 700px) {
   .overview { padding: 1.35rem 1.35rem 1.1rem; }
