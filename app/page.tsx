@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import QRCode from "qrcode";
 
-const slideCount = 10;
+const slideCount = 12;
 const virtualCampusUrl = "https://www.epixum.com";
 
 export default function Home() {
@@ -326,6 +326,61 @@ export default function Home() {
             </div>
           </div>
           <footer className="footer projectFooter"><p>Proyecto 0 · Primer ejemplo</p><div className="slideNumber" aria-label="Diapositiva 10 de 10"><span>10</span><i /></div></footer>
+        </section>
+
+        <section className="slide opencodeGuide" aria-labelledby="opencode-guide-title">
+          <div className="guideGlow" aria-hidden="true" />
+          <header className="topbar guideTopbar">
+            <div className="brand" aria-label="Desarrollo web e inteligencia artificial">
+              <span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span>
+              <span className="brandText">WEB · IA</span>
+            </div>
+            <p className="edition">OpenCode</p>
+          </header>
+          <div className="guideContent">
+            <div className="guideLead">
+              <p className="eyebrow"><span />Diapositiva 11</p>
+              <p className="setupKicker">Conozcamos la herramienta</p>
+              <h2 id="opencode-guide-title">Abrí <em>OpenCode.</em></h2>
+              <p>Vamos a familiarizarnos con sus espacios principales antes de empezar a trabajar con nuestro proyecto.</p>
+            </div>
+            <div className="interfaceMap" aria-label="Partes principales de la interfaz de OpenCode">
+              <article><span>01</span><div><h3>Proyectos y sesiones</h3><p>Desde el lateral podés acceder a tus proyectos y organizar las conversaciones de trabajo.</p></div></article>
+              <article><span>02</span><div><h3>Área de conversación</h3><p>En el panel central escribís tus pedidos, leés las respuestas y revisás las acciones propuestas.</p></div></article>
+              <article><span>03</span><div><h3>Archivos y contexto</h3><p>OpenCode puede trabajar con los archivos de la carpeta que abriste; indicá lo que necesitás con claridad.</p></div></article>
+              <article><span>04</span><div><h3>Terminal y permisos</h3><p>Cuando sea necesario, verás la terminal o una solicitud de permiso. Leela antes de confirmar.</p></div></article>
+            </div>
+          </div>
+          <footer className="footer guideFooter"><p>Explorar · Pedir · Revisar</p><div className="slideNumber" aria-label="Diapositiva 11 de 12"><span>11</span><i /></div></footer>
+        </section>
+
+        <section className="slide openProject" aria-labelledby="open-project-title">
+          <div className="openProjectGlow" aria-hidden="true" />
+          <header className="topbar openProjectTopbar">
+            <div className="brand" aria-label="Desarrollo web e inteligencia artificial">
+              <span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span>
+              <span className="brandText">WEB · IA</span>
+            </div>
+            <p className="edition">Primer proyecto</p>
+          </header>
+          <div className="openProjectContent">
+            <div className="openProjectLead">
+              <p className="eyebrow"><span />Diapositiva 12</p>
+              <p className="setupKicker">Preparar el espacio de trabajo</p>
+              <h2 id="open-project-title">Abrí la carpeta<br />en <em>OpenCode.</em></h2>
+              <p>Así OpenCode podrá usar los archivos de nuestro primer proyecto como contexto de trabajo.</p>
+            </div>
+            <div className="openProjectPanel">
+              <ol className="openProjectSteps">
+                <li><span>01</span><p>En la pantalla inicial de OpenCode, elegí <strong>Abrir carpeta</strong>.</p></li>
+                <li><span>02</span><p>Buscá la carpeta del curso en tu disco.</p></li>
+                <li><span>03</span><p>Seleccioná <strong>proyecto-0-primer-ejemplo</strong> y confirmá la apertura.</p></li>
+                <li><span>04</span><p>Verificá que el nombre de la carpeta aparezca como proyecto activo en OpenCode.</p></li>
+              </ol>
+              <div className="openProjectPath"><code>curso-desarrollo-web-ia</code><span>›</span><code>proyecto-0-primer-ejemplo</code></div>
+            </div>
+          </div>
+          <footer className="footer openProjectFooter"><p>Carpeta abierta · Contexto listo</p><div className="slideNumber" aria-label="Diapositiva 12 de 12"><span>12</span><i /></div></footer>
         </section>
       </div>
       <nav className="slideNavigation" aria-label="Navegación de diapositivas">

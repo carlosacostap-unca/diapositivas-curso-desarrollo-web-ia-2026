@@ -279,7 +279,7 @@ h1 {
 }
 
 .presentation { position: relative; width: 100%; overflow: hidden; }
-.slideTrack { display: flex; width: 1000vw; transition: transform 650ms cubic-bezier(0.65, 0, 0.35, 1); }
+.slideTrack { display: flex; width: 1200vw; transition: transform 650ms cubic-bezier(0.65, 0, 0.35, 1); }
 .slide { flex: 0 0 100vw; }
 
 .overview {
@@ -433,6 +433,39 @@ h1 {
 .projectSteps p { margin: 0; color: #f9e8ee; font-size: clamp(.78rem, 1.05vw, .92rem); line-height: 1.4; }
 .projectSteps strong { color: #fff4f8; }
 
+.opencodeGuide { isolation: isolate; position: relative; display: grid; grid-template-rows: auto 1fr auto; min-height: 100svh; overflow: hidden; padding: clamp(1.5rem, 3.5vw, 3.5rem) clamp(1.5rem, 6vw, 7rem); background: #102a2a; color: #edf9f3; }
+.opencodeGuide::before { content: ""; position: absolute; z-index: -2; inset: 0; opacity: .22; background-image: radial-gradient(circle at 1px 1px, rgba(198, 255, 227, .45) 1px, transparent 0); background-size: 1.25rem 1.25rem; mask-image: linear-gradient(132deg, black, transparent 72%); }
+.guideGlow { position: absolute; z-index: -1; width: clamp(24rem, 43vw, 44rem); aspect-ratio: 1; right: -12%; bottom: -35%; border-radius: 50%; background: radial-gradient(circle, rgba(84, 215, 166, .31), rgba(84, 215, 166, 0) 67%); }
+.guideTopbar, .guideFooter { border-color: rgba(237, 249, 243, .17); }
+.guideContent { align-self: center; display: grid; grid-template-columns: minmax(0, .82fr) minmax(26rem, 1.18fr); gap: clamp(2.5rem, 9vw, 11rem); padding: clamp(1.8rem, 5vh, 4rem) 0; }
+.guideLead h2 { margin: 0; font-size: clamp(2.5rem, 5vw, 5.45rem); font-weight: 650; letter-spacing: -.065em; line-height: .92; }
+.guideLead h2 em { color: #75e5bd; font-style: italic; font-weight: 520; }
+.guideLead > p:last-child { max-width: 28rem; margin: 1.3rem 0 0; color: #c2ded1; font-size: clamp(.92rem, 1.3vw, 1.1rem); line-height: 1.5; }
+.interfaceMap { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+.interfaceMap article { min-height: 10.5rem; padding: clamp(1rem, 1.7vw, 1.4rem); border: 1px solid rgba(237, 249, 243, .16); background: rgba(255, 255, 255, .055); }
+.interfaceMap span { color: #75e5bd; font-family: var(--font-geist-mono), monospace; font-size: .68rem; font-weight: 700; letter-spacing: .1em; }
+.interfaceMap h3 { margin: 1rem 0 .45rem; font-size: clamp(1rem, 1.3vw, 1.25rem); letter-spacing: -.035em; }
+.interfaceMap p { margin: 0; color: #bfdbce; font-size: clamp(.76rem, 1vw, .9rem); line-height: 1.45; }
+
+.openProject { isolation: isolate; position: relative; display: grid; grid-template-rows: auto 1fr auto; min-height: 100svh; overflow: hidden; padding: clamp(1.5rem, 3.5vw, 3.5rem) clamp(1.5rem, 6vw, 7rem); background: #16253f; color: #f2f6ff; }
+.openProject::before { content: ""; position: absolute; z-index: -2; inset: 0; opacity: .24; background-image: linear-gradient(rgba(209, 224, 255, .34) 1px, transparent 1px), linear-gradient(90deg, rgba(209, 224, 255, .34) 1px, transparent 1px); background-size: 4rem 4rem; mask-image: linear-gradient(135deg, black, transparent 70%); }
+.openProjectGlow { position: absolute; z-index: -1; width: clamp(22rem, 42vw, 42rem); aspect-ratio: 1; right: -11%; top: -25%; border-radius: 50%; background: radial-gradient(circle, rgba(102, 155, 255, .38), rgba(102, 155, 255, 0) 67%); }
+.openProjectTopbar, .openProjectFooter { border-color: rgba(236, 243, 255, .18); }
+.openProjectContent { align-self: center; display: grid; grid-template-columns: minmax(0, .86fr) minmax(25rem, 1.14fr); gap: clamp(2.5rem, 9vw, 11rem); padding: clamp(1.8rem, 5vh, 4rem) 0; }
+.openProjectLead h2 { margin: 0; font-size: clamp(2.5rem, 5vw, 5.45rem); font-weight: 650; letter-spacing: -.065em; line-height: .92; }
+.openProjectLead h2 em { color: #9fc2ff; font-style: italic; font-weight: 520; }
+.openProjectLead > p:last-child { max-width: 28rem; margin: 1.3rem 0 0; color: #c8d8f3; font-size: clamp(.92rem, 1.3vw, 1.1rem); line-height: 1.5; }
+.openProjectPanel { padding: clamp(1.15rem, 2.1vw, 1.8rem); border: 1px solid rgba(236, 243, 255, .18); background: rgba(255, 255, 255, .055); box-shadow: 0 1.5rem 4rem rgba(3, 12, 28, .2); }
+.openProjectSteps { display: grid; gap: .75rem; margin: 0; padding: 0; list-style: none; }
+.openProjectSteps li { display: grid; grid-template-columns: 2rem 1fr; gap: .85rem; }
+.openProjectSteps span { color: #9fc2ff; font-family: var(--font-geist-mono), monospace; font-size: .68rem; font-weight: 700; }
+.openProjectSteps p { margin: 0; color: #e4edff; font-size: clamp(.78rem, 1.05vw, .92rem); line-height: 1.4; }
+.openProjectSteps strong { color: #fff; }
+.openProjectPath { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid rgba(236, 243, 255, .14); font-family: var(--font-geist-mono), monospace; }
+.openProjectPath code { padding: .5rem .65rem; background: rgba(4, 14, 34, .58); color: #d9e6ff; font-size: clamp(.68rem, .98vw, .84rem); font-weight: 700; overflow-wrap: anywhere; }
+.openProjectPath code:last-child { color: #16253f; background: #9fc2ff; }
+.openProjectPath span { color: #9fc2ff; font-size: 1.4rem; line-height: 1; }
+
 @media (max-width: 700px) {
   .overview { padding: 1.35rem 1.35rem 1.1rem; }
   .overviewLead { display: block; }
@@ -481,4 +514,19 @@ h1 {
   .folderPath code { font-size: .69rem; }
   .projectSteps { gap: .55rem; }
   .projectSteps p { font-size: .74rem; }
+  .opencodeGuide { padding: 1.35rem 1.35rem 1.1rem; }
+  .guideContent { grid-template-columns: 1fr; gap: 1.3rem; padding: 1.8rem 0; }
+  .guideLead h2 { font-size: clamp(2.5rem, 12vw, 4.2rem); }
+  .interfaceMap { gap: .55rem; }
+  .interfaceMap article { min-height: auto; padding: .8rem; }
+  .interfaceMap h3 { margin: .6rem 0 .3rem; font-size: .93rem; }
+  .interfaceMap p { font-size: .72rem; }
+  .openProject { padding: 1.35rem 1.35rem 1.1rem; }
+  .openProjectContent { grid-template-columns: 1fr; gap: 1.3rem; padding: 1.8rem 0; }
+  .openProjectLead h2 { font-size: clamp(2.5rem, 12vw, 4.2rem); }
+  .openProjectPanel { padding: 1rem; }
+  .openProjectSteps { gap: .58rem; }
+  .openProjectSteps p { font-size: .74rem; }
+  .openProjectPath { gap: .35rem; }
+  .openProjectPath code { font-size: .64rem; }
 }
