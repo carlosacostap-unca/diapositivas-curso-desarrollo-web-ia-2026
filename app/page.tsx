@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import QRCode from "qrcode";
 
-const slideCount = 24;
+const slideCount = 28;
 const virtualCampusUrl = "https://www.epixum.com";
 
 export default function Home() {
@@ -517,6 +517,34 @@ export default function Home() {
           <header className="topbar reflectionTopbar"><div className="brand" aria-label="Desarrollo web e inteligencia artificial"><span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span><span className="brandText">WEB · IA</span></div><p className="edition">Cierre del Proyecto 0</p></header>
           <div className="reflectionContent"><div className="reflectionLead"><p className="eyebrow"><span />Diapositiva 24</p><h2 id="correction-title">Mejorá y<br /><em>comprobá.</em></h2><p>Elegí una afirmación o aspecto mejorable, pedí una corrección concreta y verificá el efecto directamente en el archivo.</p></div><div className="correctionPanel"><ol><li><span>01</span><p><strong>Detectá:</strong> ¿el resumen menciona a todos los personajes? ¿el cuento tiene un final claro?</p></li><li><span>02</span><p><strong>Pedí:</strong> “Actualizá <code>resumen-y-personajes.txt</code> para incluir todos los personajes que aparecen en <code>cuento-infantil.txt</code>.”</p></li><li><span>03</span><p><strong>Comprobá:</strong> abrí el archivo actualizado y contrastalo con el cuento fuente.</p></li></ol><p className="correctionClosing">Corregir no es repetir el pedido: es indicar qué mejorar, dónde y cómo comprobarlo.</p></div></div>
           <footer className="footer reflectionFooter"><p>Detectar · Corregir · Verificar</p><div className="slideNumber" aria-label="Diapositiva 24 de 24"><span>24</span><i /></div></footer>
+        </section>
+
+        <section className="slide conceptSlide conceptModels" aria-labelledby="project-one-title">
+          <div className="conceptGlow" aria-hidden="true" />
+          <header className="topbar conceptTopbar"><div className="brand"><span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span><span className="brandText">WEB · IA</span></div><p className="edition">Proyecto 1</p></header>
+          <div className="conceptContent"><div className="conceptLead"><p className="eyebrow"><span />Diapositiva 25</p><h2 id="project-one-title">Gestor personal<br />de <em>tareas.</em></h2><p>Crearás una aplicación individual para administrar tareas mediante un recorrido claro y demostrable.</p></div><div className="conceptCards threeCards"><article><span>01 · Crear</span><h3>Agregar una tarea</h3><p>La tarea aparece en la lista con su título, descripción y estado.</p></article><article><span>02 · Actualizar</span><h3>Editar o completar</h3><p>La persona modifica los datos o marca el avance de la tarea.</p></article><article><span>03 · Eliminar</span><h3>Limpiar la lista</h3><p>Una tarea que ya no se necesita puede eliminarse.</p></article></div></div>
+          <footer className="footer conceptFooter"><p>Crear · Listar · Actualizar · Eliminar</p><div className="slideNumber" aria-label="Diapositiva 25 de 28"><span>25</span><i /></div></footer>
+        </section>
+
+        <section className="slide conceptSlide conceptAgent" aria-labelledby="task-model-title">
+          <div className="conceptGlow" aria-hidden="true" />
+          <header className="topbar conceptTopbar"><div className="brand"><span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span><span className="brandText">WEB · IA</span></div><p className="edition">Proyecto 1</p></header>
+          <div className="conceptContent"><div className="conceptLead"><p className="eyebrow"><span />Diapositiva 26</p><h2 id="task-model-title">Modelo mínimo<br />de una <em>tarea.</em></h2><p>El núcleo es deliberadamente simple; debe alcanzar para demostrar las cuatro operaciones.</p></div><div className="agentCycle"><article><span>Identificador</span><p>Permite reconocer una tarea.</p></article><i>→</i><article><span>Título</span><p>Indica qué hay que hacer.</p></article><i>→</i><article><span>Descripción</span><p>Aporta detalle cuando hace falta.</p></article><i>→</i><article><span>Estado</span><p>Señala si está pendiente o completada.</p></article><p className="agentReminder">Recorrido demostrable: crear, visualizar, actualizar y eliminar una tarea.</p></div></div>
+          <footer className="footer conceptFooter"><p>Datos mínimos · Operaciones completas</p><div className="slideNumber" aria-label="Diapositiva 26 de 28"><span>26</span><i /></div></footer>
+        </section>
+
+        <section className="slide conceptSlide conceptGenerative" aria-labelledby="limits-title">
+          <div className="conceptGlow" aria-hidden="true" />
+          <header className="topbar conceptTopbar"><div className="brand"><span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span><span className="brandText">WEB · IA</span></div><p className="edition">Proyecto 1</p></header>
+          <div className="conceptContent"><div className="conceptLead"><p className="eyebrow"><span />Diapositiva 27</p><h2 id="limits-title">Límites claros,<br />diseño <em>propio.</em></h2><p>Hay condiciones que no cambian y decisiones que pueden evolucionar durante el desarrollo.</p></div><div className="comparisonCards"><article><span className="comparisonTag">Restricciones estables</span><h3>Lo obligatorio</h3><p>Experiencia individual, sin cuentas, sin privacidad ni aislamiento por usuario, con CRUD demostrable.</p><small>El gestor no será multiusuario en esta etapa.</small></article><article className="agentCard"><span className="comparisonTag">Decisiones evolutivas</span><h3>Lo que podés diseñar</h3><p>Colores, layout, campos extra, categorías, filtros, orden y detalles de interacción.</p><small>La creatividad aparece dentro de los límites del problema.</small></article></div></div>
+          <footer className="footer conceptFooter"><p>Condiciones comunes · Decisiones propias</p><div className="slideNumber" aria-label="Diapositiva 27 de 28"><span>27</span><i /></div></footer>
+        </section>
+
+        <section className="slide conceptSlide conceptModels" aria-labelledby="stack-title">
+          <div className="conceptGlow" aria-hidden="true" />
+          <header className="topbar conceptTopbar"><div className="brand"><span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span><span className="brandText">WEB · IA</span></div><p className="edition">Proyecto 1</p></header>
+          <div className="conceptContent"><div className="conceptLead"><p className="eyebrow"><span />Diapositiva 28</p><h2 id="stack-title">Primero local;<br />después <em>conectado.</em></h2><p>Avanzaremos por etapas para validar la experiencia antes de incorporar persistencia en la nube.</p></div><div className="conceptFlow"><article><span className="flowTag">Etapa 1</span><h3>localStorage</h3><p>Las tareas se guardan en el navegador para construir y probar el flujo completo.</p></article><i>→</i><article><span className="flowTag">Etapa 2</span><h3>Supabase</h3><p>Luego migraremos la persistencia a una base de datos.</p></article><i>→</i><article><span className="flowTag">Durante el desarrollo</span><h3>MCP</h3><p>Usaremos MCP para conectar herramientas y acompañar el proceso de desarrollo.</p></article></div></div>
+          <footer className="footer conceptFooter"><p>Probar · Persistir · Evolucionar</p><div className="slideNumber" aria-label="Diapositiva 28 de 28"><span>28</span><i /></div></footer>
         </section>
       </div>
       <nav className="slideNavigation" aria-label="Navegación de diapositivas">
