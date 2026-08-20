@@ -279,7 +279,7 @@ h1 {
 }
 
 .presentation { position: relative; width: 100%; overflow: hidden; }
-.slideTrack { display: flex; width: 1800vw; transition: transform 650ms cubic-bezier(0.65, 0, 0.35, 1); }
+.slideTrack { display: flex; width: 2100vw; transition: transform 650ms cubic-bezier(0.65, 0, 0.35, 1); }
 .slide { flex: 0 0 100vw; }
 
 .overview {
@@ -547,6 +547,46 @@ h1 {
 .verificationPanel li p { margin: 0; color: #f5e5e2; font-size: clamp(.8rem, 1.05vw, .94rem); line-height: 1.43; }
 .verificationClosing { margin: 0; padding: .85rem .95rem; border-left: 2px solid #ff9d95; color: #ffe5e1; font-size: clamp(.83rem, 1.08vw, .96rem); font-weight: 650; line-height: 1.4; }
 
+.labSlide { isolation: isolate; position: relative; display: grid; grid-template-rows: auto 1fr auto; min-height: 100svh; overflow: hidden; padding: clamp(1.5rem, 3.5vw, 3.5rem) clamp(1.5rem, 6vw, 7rem); color: #eff7f5; }
+.applicationSlide { background: #1f3546; }
+.folderCheckSlide { background: #38301f; }
+.fileDemoSlide { background: #183c35; }
+.labSlide::before { content: ""; position: absolute; z-index: -2; inset: 0; opacity: .23; background-image: linear-gradient(rgba(232, 248, 243, .32) 1px, transparent 1px), linear-gradient(90deg, rgba(232, 248, 243, .32) 1px, transparent 1px); background-size: 4rem 4rem; mask-image: linear-gradient(132deg, black, transparent 72%); }
+.labGlow { position: absolute; z-index: -1; width: clamp(23rem, 42vw, 43rem); aspect-ratio: 1; right: -10%; top: -26%; border-radius: 50%; background: radial-gradient(circle, rgba(112, 189, 238, .32), rgba(112, 189, 238, 0) 68%); }
+.folderCheckSlide .labGlow { background: radial-gradient(circle, rgba(245, 191, 78, .32), rgba(245, 191, 78, 0) 68%); }
+.fileDemoSlide .labGlow { background: radial-gradient(circle, rgba(104, 226, 175, .28), rgba(104, 226, 175, 0) 68%); }
+.labTopbar, .labFooter { border-color: rgba(239, 247, 245, .17); }
+.labContent { align-self: center; display: grid; grid-template-columns: minmax(0, .85fr) minmax(26rem, 1.15fr); gap: clamp(2.5rem, 9vw, 11rem); padding: clamp(1.8rem, 5vh, 4rem) 0; }
+.labLead h2 { margin: 0; font-size: clamp(2.5rem, 5vw, 5.45rem); font-weight: 650; letter-spacing: -.065em; line-height: .92; }
+.labLead h2 em { color: #83cdfb; font-style: italic; font-weight: 520; }
+.folderCheckSlide .labLead h2 em { color: #f5bf4e; }
+.fileDemoSlide .labLead h2 em { color: #83e3bc; }
+.labLead > p:last-child { max-width: 29rem; margin: 1.3rem 0 0; color: #cfdfeb; font-size: clamp(.92rem, 1.3vw, 1.1rem); line-height: 1.5; }
+.folderCheckSlide .labLead > p:last-child { color: #e9d9b6; }
+.fileDemoSlide .labLead > p:last-child { color: #c7e1d6; }
+.applicationMap { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: clamp(.5rem, 1.5vw, 1.2rem); }
+.applicationMap article { min-height: 14rem; padding: clamp(1rem, 1.7vw, 1.45rem); border: 1px solid rgba(233, 246, 255, .18); background: rgba(255, 255, 255, .06); }
+.applicationMap article span { color: #83cdfb; font-family: var(--font-geist-mono), monospace; font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.applicationMap h3 { margin: 1rem 0 .5rem; font-size: clamp(1.1rem, 1.5vw, 1.4rem); letter-spacing: -.04em; }
+.applicationMap p { margin: 0; color: #d8e7f1; font-size: clamp(.8rem, 1.05vw, .94rem); line-height: 1.45; }
+.applicationMap > i { color: #83cdfb; font-size: clamp(1.3rem, 2vw, 2rem); font-style: normal; }
+.applicationNote { grid-column: 1 / -1; margin: 0; padding: .8rem .95rem; border-left: 2px solid #83cdfb; color: #e4eff8; font-size: clamp(.8rem, 1.05vw, .94rem); line-height: 1.45; }
+.folderCheckPanel { padding: clamp(1.1rem, 2vw, 1.7rem); border: 1px solid rgba(255, 246, 219, .18); background: rgba(255, 255, 255, .06); }
+.folderCheckPath { padding: .8rem .9rem; background: rgba(29, 24, 10, .52); }
+.folderCheckPath span { display: block; margin-bottom: .45rem; color: #f5bf4e; font-family: var(--font-geist-mono), monospace; font-size: .65rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.folderCheckPath code { color: #fff0bc; font-family: var(--font-geist-mono), monospace; font-size: clamp(.74rem, 1vw, .9rem); font-weight: 700; overflow-wrap: anywhere; }
+.folderCheckPanel ol { display: grid; gap: .78rem; margin: 1.15rem 0; padding: 0; list-style: none; }
+.folderCheckPanel li { display: grid; grid-template-columns: 2rem 1fr; gap: .8rem; }
+.folderCheckPanel li span { color: #f5bf4e; font-family: var(--font-geist-mono), monospace; font-size: .68rem; font-weight: 700; }
+.folderCheckPanel li p { margin: 0; color: #f2e7cd; font-size: clamp(.8rem, 1.05vw, .94rem); line-height: 1.43; }
+.folderCheckWarning { margin: 0; padding: .8rem .95rem; border-left: 2px solid #f5bf4e; color: #fff0c7; font-size: clamp(.8rem, 1.05vw, .94rem); line-height: 1.42; }
+.fileFlow { display: grid; gap: .72rem; margin: 0; padding: 0; list-style: none; }
+.fileFlow li { display: grid; grid-template-columns: 2.3rem 1fr; gap: .9rem; padding: clamp(.8rem, 1.45vw, 1.12rem); border: 1px solid rgba(230, 255, 244, .17); background: rgba(255, 255, 255, .055); }
+.fileFlow li > span { display: grid; place-items: center; align-self: start; width: 2rem; height: 2rem; border: 1px solid rgba(131, 227, 188, .72); border-radius: 50%; color: #83e3bc; font-family: var(--font-geist-mono), monospace; font-size: .65rem; font-weight: 700; }
+.fileFlow h3 { margin: .05rem 0 .27rem; font-size: clamp(1rem, 1.3vw, 1.2rem); letter-spacing: -.035em; }
+.fileFlow p { margin: 0; color: #d4ebdf; font-size: clamp(.78rem, 1.04vw, .92rem); line-height: 1.42; }
+.fileFlow code { display: inline-block; margin-top: .45rem; padding: .42rem .55rem; background: rgba(1, 16, 10, .55); color: #a8f0d0; font-family: var(--font-geist-mono), monospace; font-size: clamp(.72rem, .95vw, .84rem); font-weight: 700; }
+
 @media (max-width: 700px) {
   .overview { padding: 1.35rem 1.35rem 1.1rem; }
   .overviewLead { display: block; }
@@ -648,4 +688,20 @@ h1 {
   .verificationPanel ol { gap: .55rem; margin: .85rem 0; }
   .verificationPanel li p { font-size: .74rem; }
   .verificationClosing { padding: .65rem .75rem; font-size: .75rem; }
+  .labSlide { padding: 1.35rem 1.35rem 1.1rem; }
+  .labContent { grid-template-columns: 1fr; gap: 1.3rem; padding: 1.8rem 0; }
+  .labLead h2 { font-size: clamp(2.5rem, 12vw, 4.2rem); }
+  .applicationMap { grid-template-columns: 1fr; gap: .55rem; }
+  .applicationMap > i { justify-self: center; transform: rotate(90deg); font-size: 1.2rem; }
+  .applicationMap article { min-height: auto; padding: .85rem; }
+  .applicationMap h3 { margin: .55rem 0 .25rem; font-size: 1rem; }
+  .applicationMap p, .applicationNote { font-size: .73rem; }
+  .folderCheckPanel { padding: .9rem; }
+  .folderCheckPath code { font-size: .66rem; }
+  .folderCheckPanel ol { gap: .55rem; margin: .85rem 0; }
+  .folderCheckPanel li p, .folderCheckWarning { font-size: .74rem; }
+  .fileFlow { gap: .5rem; }
+  .fileFlow li { grid-template-columns: 2.1rem 1fr; gap: .65rem; padding: .75rem; }
+  .fileFlow h3 { font-size: .94rem; }
+  .fileFlow p, .fileFlow code { font-size: .71rem; }
 }

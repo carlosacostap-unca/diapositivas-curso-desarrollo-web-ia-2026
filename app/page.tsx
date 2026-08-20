@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import QRCode from "qrcode";
 
-const slideCount = 18;
+const slideCount = 21;
 const virtualCampusUrl = "https://www.epixum.com";
 
 export default function Home() {
@@ -466,6 +466,36 @@ export default function Home() {
             <div className="verificationPanel"><p className="verificationIntro">Antes de aceptar un resultado, hacé estas comprobaciones:</p><ol><li><span>01</span><p><strong>Entendé</strong> qué propone y por qué.</p></li><li><span>02</span><p><strong>Probalo</strong> en tu proyecto y observá el resultado.</p></li><li><span>03</span><p><strong>Revisá</strong> el código, los datos sensibles y las consecuencias de los cambios.</p></li><li><span>04</span><p><strong>Pedí ajustes</strong> cuando algo no cumple tu objetivo.</p></li></ol><p className="verificationClosing">La responsabilidad final sobre lo que se construye es humana.</p></div>
           </div>
           <footer className="footer practiceFooter"><p>Entender · Probar · Revisar</p><div className="slideNumber" aria-label="Diapositiva 18 de 18"><span>18</span><i /></div></footer>
+        </section>
+
+        <section className="slide labSlide applicationSlide" aria-labelledby="application-title">
+          <div className="labGlow" aria-hidden="true" />
+          <header className="topbar labTopbar"><div className="brand" aria-label="Desarrollo web e inteligencia artificial"><span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span><span className="brandText">WEB · IA</span></div><p className="edition">Práctica inicial</p></header>
+          <div className="labContent">
+            <div className="labLead"><p className="eyebrow"><span />Diapositiva 19</p><h2 id="application-title">OpenCode es la<br /><em>aplicación.</em></h2><p>Usamos OpenCode como entorno de trabajo y agente de desarrollo; no es el modelo de IA que genera las respuestas.</p></div>
+            <div className="applicationMap"><article><span>OpenCode</span><h3>Aplicación y agente</h3><p>Es la herramienta que abrís en tu computadora: organiza el proyecto, la conversación y las acciones autorizadas.</p></article><i aria-hidden="true">↔</i><article><span>Modelo de IA</span><h3>Capacidad de lenguaje</h3><p>Es el LLM elegido para interpretar la solicitud y generar texto, código o propuestas.</p></article><p className="applicationNote">OpenCode puede conectarse con distintos modelos y proveedores; por eso conviene separar la aplicación del modelo.</p></div>
+          </div>
+          <footer className="footer labFooter"><p>Aplicación · Agente · Modelo</p><div className="slideNumber" aria-label="Diapositiva 19 de 21"><span>19</span><i /></div></footer>
+        </section>
+
+        <section className="slide labSlide folderCheckSlide" aria-labelledby="folder-check-title">
+          <div className="labGlow" aria-hidden="true" />
+          <header className="topbar labTopbar"><div className="brand" aria-label="Desarrollo web e inteligencia artificial"><span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span><span className="brandText">WEB · IA</span></div><p className="edition">Práctica inicial</p></header>
+          <div className="labContent">
+            <div className="labLead"><p className="eyebrow"><span />Diapositiva 20</p><h2 id="folder-check-title">Primero, confirmá<br />la carpeta <em>activa.</em></h2><p>Antes de pedir una acción, verificá que OpenCode esté trabajando en el proyecto correcto.</p></div>
+            <div className="folderCheckPanel"><div className="folderCheckPath"><span>Proyecto activo</span><code>curso-desarrollo-web-ia › proyecto-0-primer-ejemplo</code></div><ol><li><span>01</span><p>Buscá el nombre o ruta del proyecto visible en OpenCode.</p></li><li><span>02</span><p>Confirmá que termina en <strong>proyecto-0-primer-ejemplo</strong>.</p></li><li><span>03</span><p>Si no es esa carpeta, abrila antes de continuar.</p></li></ol><p className="folderCheckWarning">La carpeta activa define qué archivos puede leer o modificar el agente.</p></div>
+          </div>
+          <footer className="footer labFooter"><p>Carpeta correcta · Acción segura</p><div className="slideNumber" aria-label="Diapositiva 20 de 21"><span>20</span><i /></div></footer>
+        </section>
+
+        <section className="slide labSlide fileDemoSlide" aria-labelledby="file-demo-title">
+          <div className="labGlow" aria-hidden="true" />
+          <header className="topbar labTopbar"><div className="brand" aria-label="Desarrollo web e inteligencia artificial"><span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span><span className="brandText">WEB · IA</span></div><p className="edition">Práctica inicial</p></header>
+          <div className="labContent">
+            <div className="labLead"><p className="eyebrow"><span />Diapositiva 21</p><h2 id="file-demo-title">Un primer flujo<br />de <em>trabajo.</em></h2><p>Pedile a OpenCode un paso por vez y revisá cada resultado antes de pasar al siguiente.</p></div>
+            <ol className="fileFlow"><li><span>01</span><div><h3>Leé</h3><p>Pedí: “Mostrame los archivos de la carpeta activa.”</p></div></li><li><span>02</span><div><h3>Creá</h3><p>Pedí: “Creá un archivo <code>hola.js</code> que muestre un saludo en consola.”</p></div></li><li><span>03</span><div><h3>Modificá</h3><p>Pedí: “Cambiá el saludo para que incluya mi nombre.”</p></div></li><li><span>04</span><div><h3>Ejecutá</h3><p>Revisá la acción y autorizá el comando sencillo:</p><code>node hola.js</code></div></li></ol>
+          </div>
+          <footer className="footer labFooter"><p>Leer · Crear · Modificar · Ejecutar</p><div className="slideNumber" aria-label="Diapositiva 21 de 21"><span>21</span><i /></div></footer>
         </section>
       </div>
       <nav className="slideNavigation" aria-label="Navegación de diapositivas">
