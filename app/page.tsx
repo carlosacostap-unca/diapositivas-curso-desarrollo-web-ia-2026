@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import QRCode from "qrcode";
 
-const slideCount = 9;
+const slideCount = 10;
 const virtualCampusUrl = "https://www.epixum.com";
 
 export default function Home() {
@@ -295,6 +295,37 @@ export default function Home() {
             </div>
           </div>
           <footer className="footer workspaceFooter"><p>Un lugar para cada proyecto</p><div className="slideNumber" aria-label="Diapositiva 9 de 9"><span>09</span><i /></div></footer>
+        </section>
+
+        <section className="slide firstProject" aria-labelledby="first-project-title">
+          <div className="projectGlow" aria-hidden="true" />
+          <header className="topbar projectTopbar">
+            <div className="brand" aria-label="Desarrollo web e inteligencia artificial">
+              <span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span>
+              <span className="brandText">WEB · IA</span>
+            </div>
+            <p className="edition">Primer proyecto</p>
+          </header>
+          <div className="projectContent">
+            <div className="projectLead">
+              <p className="eyebrow"><span />Diapositiva 10</p>
+              <p className="setupKicker">Organización del curso</p>
+              <h2 id="first-project-title">Creá tu primer<br /><em>proyecto.</em></h2>
+              <p>Dentro de la carpeta del curso, prepararemos el espacio para nuestro primer ejemplo.</p>
+            </div>
+            <div className="projectPanel">
+              <p>En el Explorador de archivos, abrí la carpeta del curso y creá dentro una nueva carpeta con este nombre:</p>
+              <div className="folderPath" aria-label="Ruta de carpetas">
+                <code>curso-desarrollo-web-ia</code><span>›</span><code className="newFolder">proyecto-0-primer-ejemplo</code>
+              </div>
+              <ol className="projectSteps">
+                <li><span>01</span><p>Abrí <strong>curso-desarrollo-web-ia</strong>.</p></li>
+                <li><span>02</span><p>Hacé click derecho y elegí <strong>Nuevo › Carpeta</strong>.</p></li>
+                <li><span>03</span><p>Escribí <strong>proyecto-0-primer-ejemplo</strong> y presioná Enter.</p></li>
+              </ol>
+            </div>
+          </div>
+          <footer className="footer projectFooter"><p>Proyecto 0 · Primer ejemplo</p><div className="slideNumber" aria-label="Diapositiva 10 de 10"><span>10</span><i /></div></footer>
         </section>
       </div>
       <nav className="slideNavigation" aria-label="Navegación de diapositivas">
