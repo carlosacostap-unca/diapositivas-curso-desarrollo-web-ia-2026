@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import QRCode from "qrcode";
 
-const slideCount = 12;
+const slideCount = 15;
 const virtualCampusUrl = "https://www.epixum.com";
 
 export default function Home() {
@@ -385,6 +385,50 @@ export default function Home() {
             </div>
           </div>
           <footer className="footer openProjectFooter"><p>Carpeta abierta · Contexto listo</p><div className="slideNumber" aria-label="Diapositiva 12 de 12"><span>12</span><i /></div></footer>
+        </section>
+
+        <section className="slide conceptSlide conceptGenerative" aria-labelledby="generative-title">
+          <div className="conceptGlow" aria-hidden="true" />
+          <header className="topbar conceptTopbar"><div className="brand" aria-label="Desarrollo web e inteligencia artificial"><span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span><span className="brandText">WEB · IA</span></div><p className="edition">Conceptos esenciales</p></header>
+          <div className="conceptContent">
+            <div className="conceptLead"><p className="eyebrow"><span />Diapositiva 13</p><h2 id="generative-title">¿Qué es la IA<br /><em>generativa?</em></h2><p>Es una tecnología capaz de crear contenido nuevo a partir de nuestras indicaciones: texto, código, imágenes y más.</p></div>
+            <div className="conceptCards threeCards">
+              <article><span>01</span><h3>Vos aportás la intención</h3><p>Explicás qué necesitás, para quién y con qué condiciones.</p></article>
+              <article><span>02</span><h3>La IA propone</h3><p>Genera una respuesta o un primer borrador basado en ese contexto.</p></article>
+              <article><span>03</span><h3>Vos revisás y decidís</h3><p>Comprobás el resultado, pedís ajustes y mantenés el control.</p></article>
+            </div>
+          </div>
+          <footer className="footer conceptFooter"><p>Indicar · Generar · Revisar</p><div className="slideNumber" aria-label="Diapositiva 13 de 15"><span>13</span><i /></div></footer>
+        </section>
+
+        <section className="slide conceptSlide conceptModels" aria-labelledby="models-title">
+          <div className="conceptGlow" aria-hidden="true" />
+          <header className="topbar conceptTopbar"><div className="brand" aria-label="Desarrollo web e inteligencia artificial"><span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span><span className="brandText">WEB · IA</span></div><p className="edition">Conceptos esenciales</p></header>
+          <div className="conceptContent">
+            <div className="conceptLead"><p className="eyebrow"><span />Diapositiva 14</p><h2 id="models-title">LLM, modelos<br />y <em>proveedores.</em></h2><p>Son piezas diferentes de la misma experiencia. Entenderlas ayuda a elegir mejor cómo trabajar con IA.</p></div>
+            <div className="conceptFlow" aria-label="Relación entre proveedor, modelo, LLM y OpenCode">
+              <article><span className="flowTag">Proveedor</span><h3>La organización que da acceso</h3><p>Ofrece una plataforma y permite usar uno o varios modelos.</p><small>Ej.: OpenAI, Anthropic, Google</small></article><i aria-hidden="true">→</i>
+              <article><span className="flowTag">Modelo / LLM</span><h3>El sistema que procesa lenguaje</h3><p>Un LLM es un modelo grande de lenguaje: interpreta texto y genera respuestas o código.</p><small>Ej.: GPT, Claude, Gemini</small></article><i aria-hidden="true">→</i>
+              <article><span className="flowTag">Aplicación</span><h3>La herramienta que usamos</h3><p>Nos permite conversar, dar contexto y aplicar el resultado en nuestros proyectos.</p><small>En este curso: OpenCode</small></article>
+            </div>
+          </div>
+          <footer className="footer conceptFooter"><p>Acceso · Capacidad · Experiencia</p><div className="slideNumber" aria-label="Diapositiva 14 de 15"><span>14</span><i /></div></footer>
+        </section>
+
+        <section className="slide conceptSlide conceptAgent" aria-labelledby="agent-title">
+          <div className="conceptGlow" aria-hidden="true" />
+          <header className="topbar conceptTopbar"><div className="brand" aria-label="Desarrollo web e inteligencia artificial"><span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span><span className="brandText">WEB · IA</span></div><p className="edition">Conceptos esenciales</p></header>
+          <div className="conceptContent">
+            <div className="conceptLead"><p className="eyebrow"><span />Diapositiva 15</p><h2 id="agent-title">OpenCode como<br /><em>agente.</em></h2><p>OpenCode no es el modelo: es la aplicación que coordina la interacción entre vos, el proyecto y el modelo de IA elegido.</p></div>
+            <div className="agentCycle" aria-label="Ciclo de trabajo con OpenCode">
+              <article><span>Vos</span><p>Definís el objetivo y el contexto.</p></article><i aria-hidden="true">→</i>
+              <article><span>OpenCode</span><p>Organiza la conversación y puede usar herramientas del proyecto.</p></article><i aria-hidden="true">→</i>
+              <article><span>Modelo LLM</span><p>Analiza la solicitud y genera propuestas o acciones.</p></article><i aria-hidden="true">→</i>
+              <article><span>Vos</span><p>Revisás, aprobás o pedís cambios.</p></article>
+              <p className="agentReminder">Un agente acelera el trabajo, pero las decisiones y la revisión siguen siendo tuyas.</p>
+            </div>
+          </div>
+          <footer className="footer conceptFooter"><p>Objetivo · Acción · Revisión</p><div className="slideNumber" aria-label="Diapositiva 15 de 15"><span>15</span><i /></div></footer>
         </section>
       </div>
       <nav className="slideNavigation" aria-label="Navegación de diapositivas">

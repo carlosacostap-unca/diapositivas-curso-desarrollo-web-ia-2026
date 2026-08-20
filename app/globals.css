@@ -279,7 +279,7 @@ h1 {
 }
 
 .presentation { position: relative; width: 100%; overflow: hidden; }
-.slideTrack { display: flex; width: 1200vw; transition: transform 650ms cubic-bezier(0.65, 0, 0.35, 1); }
+.slideTrack { display: flex; width: 1500vw; transition: transform 650ms cubic-bezier(0.65, 0, 0.35, 1); }
 .slide { flex: 0 0 100vw; }
 
 .overview {
@@ -469,6 +469,45 @@ h1 {
 .openProjectPath code:last-child { color: #16253f; background: #9fc2ff; }
 .openProjectPath span { color: #9fc2ff; font-size: 1.4rem; line-height: 1; }
 
+.conceptSlide { isolation: isolate; position: relative; display: grid; grid-template-rows: auto 1fr auto; min-height: 100svh; overflow: hidden; padding: clamp(1.5rem, 3.5vw, 3.5rem) clamp(1.5rem, 6vw, 7rem); color: #f7f2ed; }
+.conceptGenerative { background: #422336; }
+.conceptModels { background: #1d2d4a; }
+.conceptAgent { background: #163b39; }
+.conceptSlide::before { content: ""; position: absolute; z-index: -2; inset: 0; opacity: .24; background-image: linear-gradient(rgba(245, 239, 232, .3) 1px, transparent 1px), linear-gradient(90deg, rgba(245, 239, 232, .3) 1px, transparent 1px); background-size: 4rem 4rem; mask-image: linear-gradient(135deg, black, transparent 72%); }
+.conceptGlow { position: absolute; z-index: -1; width: clamp(23rem, 42vw, 43rem); aspect-ratio: 1; right: -11%; top: -27%; border-radius: 50%; background: radial-gradient(circle, rgba(255, 152, 185, .3), rgba(255, 152, 185, 0) 68%); }
+.conceptModels .conceptGlow { background: radial-gradient(circle, rgba(132, 177, 255, .34), rgba(132, 177, 255, 0) 68%); }
+.conceptAgent .conceptGlow { background: radial-gradient(circle, rgba(105, 227, 186, .28), rgba(105, 227, 186, 0) 68%); }
+.conceptTopbar, .conceptFooter { border-color: rgba(247, 242, 237, .17); }
+.conceptContent { align-self: center; padding: clamp(1.8rem, 5vh, 4rem) 0; }
+.conceptLead { display: grid; grid-template-columns: minmax(0, 1fr) minmax(23rem, .9fr); gap: clamp(2rem, 8vw, 10rem); align-items: end; }
+.conceptLead .eyebrow { grid-column: 1 / -1; margin-bottom: .7rem; }
+.conceptLead h2 { max-width: 13ch; margin: 0; font-size: clamp(2.5rem, 5vw, 5.45rem); font-weight: 650; letter-spacing: -.065em; line-height: .92; }
+.conceptLead h2 em { color: #ff9ebd; font-style: italic; font-weight: 520; }
+.conceptModels .conceptLead h2 em { color: #a7c6ff; }
+.conceptAgent .conceptLead h2 em { color: #80e9c3; }
+.conceptLead > p:last-child { max-width: 31rem; margin: 0 0 .25rem; color: #dfced6; font-size: clamp(.92rem, 1.3vw, 1.1rem); line-height: 1.5; }
+.conceptModels .conceptLead > p:last-child { color: #c8d8f4; }
+.conceptAgent .conceptLead > p:last-child { color: #c5ded5; }
+.conceptCards { display: grid; gap: clamp(.8rem, 1.6vw, 1.35rem); margin-top: clamp(1.7rem, 4vh, 3rem); }
+.threeCards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.conceptCards article { min-height: 12rem; padding: clamp(1.1rem, 1.9vw, 1.6rem); border: 1px solid rgba(247, 242, 237, .18); background: rgba(255, 255, 255, .06); }
+.conceptCards span { color: #ff9ebd; font-family: var(--font-geist-mono), monospace; font-size: .68rem; font-weight: 700; letter-spacing: .1em; }
+.conceptCards h3 { margin: 1.1rem 0 .5rem; font-size: clamp(1.05rem, 1.45vw, 1.38rem); letter-spacing: -.035em; }
+.conceptCards p { margin: 0; color: #e5d4dd; font-size: clamp(.8rem, 1.07vw, .95rem); line-height: 1.45; }
+.conceptFlow { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; align-items: center; gap: clamp(.45rem, 1.1vw, 1rem); margin-top: clamp(1.7rem, 4vh, 3rem); }
+.conceptFlow article { min-height: 13rem; padding: clamp(1rem, 1.7vw, 1.45rem); border: 1px solid rgba(234, 242, 255, .18); background: rgba(255, 255, 255, .06); }
+.conceptFlow > i, .agentCycle > i { color: #a7c6ff; font-size: clamp(1.2rem, 2vw, 2rem); font-style: normal; }
+.flowTag { color: #a7c6ff; font-family: var(--font-geist-mono), monospace; font-size: .67rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.conceptFlow h3 { margin: 1rem 0 .5rem; font-size: clamp(1rem, 1.35vw, 1.26rem); letter-spacing: -.035em; }
+.conceptFlow p { margin: 0; color: #dbe6fb; font-size: clamp(.78rem, 1vw, .92rem); line-height: 1.43; }
+.conceptFlow small { display: block; margin-top: 1rem; color: #93b8f7; font-family: var(--font-geist-mono), monospace; font-size: clamp(.64rem, .86vw, .75rem); line-height: 1.35; }
+.agentCycle { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; align-items: center; gap: clamp(.35rem, 1vw, .9rem); margin-top: clamp(1.7rem, 4vh, 3rem); }
+.agentCycle article { min-height: 10rem; padding: clamp(1rem, 1.65vw, 1.4rem); border: 1px solid rgba(236, 255, 247, .18); background: rgba(255, 255, 255, .06); }
+.agentCycle article span { color: #80e9c3; font-family: var(--font-geist-mono), monospace; font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.agentCycle article p { margin: 1rem 0 0; color: #d8eee4; font-size: clamp(.78rem, 1vw, .92rem); line-height: 1.45; }
+.agentCycle > i { color: #80e9c3; }
+.agentReminder { grid-column: 1 / -1; margin: 1rem 0 0; padding: .85rem 1rem; border-left: 2px solid #80e9c3; color: #d8eee4; font-size: clamp(.82rem, 1.1vw, .98rem); line-height: 1.45; }
+
 @media (max-width: 700px) {
   .overview { padding: 1.35rem 1.35rem 1.1rem; }
   .overviewLead { display: block; }
@@ -534,4 +573,24 @@ h1 {
   .openProjectSteps p { font-size: .74rem; }
   .openProjectPath { gap: .35rem; }
   .openProjectPath code { font-size: .64rem; }
+  .conceptSlide { padding: 1.35rem 1.35rem 1.1rem; }
+  .conceptContent { padding: 1.8rem 0; }
+  .conceptLead { display: block; }
+  .conceptLead h2 { font-size: clamp(2.5rem, 12vw, 4.2rem); }
+  .conceptLead > p:last-child { margin-top: 1rem; }
+  .threeCards { grid-template-columns: 1fr; gap: .55rem; margin-top: 1.2rem; }
+  .conceptCards article { min-height: auto; padding: .85rem; }
+  .conceptCards h3 { margin: .55rem 0 .28rem; font-size: .96rem; }
+  .conceptCards p { font-size: .74rem; }
+  .conceptFlow { grid-template-columns: 1fr; gap: .42rem; margin-top: 1.2rem; }
+  .conceptFlow > i { justify-self: center; transform: rotate(90deg); font-size: 1.2rem; }
+  .conceptFlow article { min-height: auto; padding: .85rem; }
+  .conceptFlow h3 { margin: .55rem 0 .25rem; font-size: .94rem; }
+  .conceptFlow p { font-size: .73rem; }
+  .conceptFlow small { margin-top: .45rem; font-size: .61rem; }
+  .agentCycle { grid-template-columns: 1fr; gap: .4rem; margin-top: 1.2rem; }
+  .agentCycle > i { justify-self: center; transform: rotate(90deg); font-size: 1.15rem; }
+  .agentCycle article { min-height: auto; padding: .8rem; }
+  .agentCycle article p { margin-top: .5rem; font-size: .73rem; }
+  .agentReminder { margin-top: .5rem; padding: .65rem .75rem; font-size: .73rem; }
 }
