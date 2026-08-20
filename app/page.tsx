@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import QRCode from "qrcode";
 
-const slideCount = 15;
+const slideCount = 18;
 const virtualCampusUrl = "https://www.epixum.com";
 
 export default function Home() {
@@ -429,6 +429,43 @@ export default function Home() {
             </div>
           </div>
           <footer className="footer conceptFooter"><p>Objetivo · Acción · Revisión</p><div className="slideNumber" aria-label="Diapositiva 15 de 15"><span>15</span><i /></div></footer>
+        </section>
+
+        <section className="slide practiceSlide promptSlide" aria-labelledby="prompt-title">
+          <div className="practiceGlow" aria-hidden="true" />
+          <header className="topbar practiceTopbar"><div className="brand" aria-label="Desarrollo web e inteligencia artificial"><span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span><span className="brandText">WEB · IA</span></div><p className="edition">Cómo conversar con IA</p></header>
+          <div className="practiceContent">
+            <div className="practiceLead"><p className="eyebrow"><span />Diapositiva 16</p><h2 id="prompt-title">Prompt, contexto<br />y <em>tokens.</em></h2><p>Tres ideas para pedir mejor y entender qué información usa el modelo al responder.</p></div>
+            <div className="promptGrid">
+              <article><span>Prompt</span><h3>La instrucción</h3><p>Es lo que escribís para indicar una tarea.</p><code>“Creá una página de bienvenida para una biblioteca.”</code></article>
+              <article><span>Contexto</span><h3>La información que acompaña</h3><p>Son los datos, archivos, reglas y conversación que ayudan a responder mejor.</p><code>“Usá HTML, CSS y estos colores: azul y blanco.”</code></article>
+              <article><span>Tokens</span><h3>Las unidades de texto</h3><p>El modelo procesa el texto en partes pequeñas llamadas tokens; el contexto disponible tiene un límite.</p><code>Más detalles útiles ≠ repetir información sin necesidad.</code></article>
+            </div>
+          </div>
+          <footer className="footer practiceFooter"><p>Instrucción · Información · Capacidad</p><div className="slideNumber" aria-label="Diapositiva 16 de 18"><span>16</span><i /></div></footer>
+        </section>
+
+        <section className="slide practiceSlide chatAgentSlide" aria-labelledby="chat-agent-title">
+          <div className="practiceGlow" aria-hidden="true" />
+          <header className="topbar practiceTopbar"><div className="brand" aria-label="Desarrollo web e inteligencia artificial"><span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span><span className="brandText">WEB · IA</span></div><p className="edition">Cómo conversar con IA</p></header>
+          <div className="practiceContent">
+            <div className="practiceLead"><p className="eyebrow"><span />Diapositiva 17</p><h2 id="chat-agent-title">¿Chat o <em>agente?</em></h2><p>Ambos usan modelos de IA, pero la diferencia está en lo que pueden hacer después de responder.</p></div>
+            <div className="comparisonCards">
+              <article><span className="comparisonTag">Chat</span><h3>Conversación y respuesta</h3><p>Recibe tu consulta y devuelve texto, ideas, explicaciones o código como propuesta.</p><div className="comparisonExample">“Explicame cómo crear un botón en HTML.”</div><small>Resultado: una respuesta para que la uses o adaptes.</small></article>
+              <article className="agentCard"><span className="comparisonTag">Agente con herramientas</span><h3>Conversación, contexto y acción</h3><p>Además de responder, puede consultar archivos, proponer cambios o ejecutar acciones autorizadas.</p><div className="comparisonExample">“Revisá los archivos de este proyecto y proponé el botón.”</div><small>Resultado: una propuesta conectada con el proyecto, siempre bajo tu revisión.</small></article>
+            </div>
+          </div>
+          <footer className="footer practiceFooter"><p>Responder · Usar contexto · Actuar</p><div className="slideNumber" aria-label="Diapositiva 17 de 18"><span>17</span><i /></div></footer>
+        </section>
+
+        <section className="slide practiceSlide verificationSlide" aria-labelledby="verification-title">
+          <div className="practiceGlow" aria-hidden="true" />
+          <header className="topbar practiceTopbar"><div className="brand" aria-label="Desarrollo web e inteligencia artificial"><span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span><span className="brandText">WEB · IA</span></div><p className="edition">Uso responsable</p></header>
+          <div className="practiceContent">
+            <div className="practiceLead"><p className="eyebrow"><span />Diapositiva 18</p><h2 id="verification-title">La IA ayuda;<br />vos <em>verificás.</em></h2><p>Una respuesta puede sonar convincente y aun así contener errores, omisiones o decisiones que no se ajustan a tu proyecto.</p></div>
+            <div className="verificationPanel"><p className="verificationIntro">Antes de aceptar un resultado, hacé estas comprobaciones:</p><ol><li><span>01</span><p><strong>Entendé</strong> qué propone y por qué.</p></li><li><span>02</span><p><strong>Probalo</strong> en tu proyecto y observá el resultado.</p></li><li><span>03</span><p><strong>Revisá</strong> el código, los datos sensibles y las consecuencias de los cambios.</p></li><li><span>04</span><p><strong>Pedí ajustes</strong> cuando algo no cumple tu objetivo.</p></li></ol><p className="verificationClosing">La responsabilidad final sobre lo que se construye es humana.</p></div>
+          </div>
+          <footer className="footer practiceFooter"><p>Entender · Probar · Revisar</p><div className="slideNumber" aria-label="Diapositiva 18 de 18"><span>18</span><i /></div></footer>
         </section>
       </div>
       <nav className="slideNavigation" aria-label="Navegación de diapositivas">

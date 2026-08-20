@@ -279,7 +279,7 @@ h1 {
 }
 
 .presentation { position: relative; width: 100%; overflow: hidden; }
-.slideTrack { display: flex; width: 1500vw; transition: transform 650ms cubic-bezier(0.65, 0, 0.35, 1); }
+.slideTrack { display: flex; width: 1800vw; transition: transform 650ms cubic-bezier(0.65, 0, 0.35, 1); }
 .slide { flex: 0 0 100vw; }
 
 .overview {
@@ -508,6 +508,45 @@ h1 {
 .agentCycle > i { color: #80e9c3; }
 .agentReminder { grid-column: 1 / -1; margin: 1rem 0 0; padding: .85rem 1rem; border-left: 2px solid #80e9c3; color: #d8eee4; font-size: clamp(.82rem, 1.1vw, .98rem); line-height: 1.45; }
 
+.practiceSlide { isolation: isolate; position: relative; display: grid; grid-template-rows: auto 1fr auto; min-height: 100svh; overflow: hidden; padding: clamp(1.5rem, 3.5vw, 3.5rem) clamp(1.5rem, 6vw, 7rem); color: #f7f5ee; }
+.promptSlide { background: #3a2b1b; }
+.chatAgentSlide { background: #1d3344; }
+.verificationSlide { background: #3c2024; }
+.practiceSlide::before { content: ""; position: absolute; z-index: -2; inset: 0; opacity: .23; background-image: linear-gradient(rgba(255, 247, 233, .34) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 247, 233, .34) 1px, transparent 1px); background-size: 4rem 4rem; mask-image: linear-gradient(132deg, black, transparent 72%); }
+.practiceGlow { position: absolute; z-index: -1; width: clamp(23rem, 42vw, 43rem); aspect-ratio: 1; right: -10%; top: -26%; border-radius: 50%; background: radial-gradient(circle, rgba(244, 182, 75, .31), rgba(244, 182, 75, 0) 68%); }
+.chatAgentSlide .practiceGlow { background: radial-gradient(circle, rgba(108, 189, 232, .31), rgba(108, 189, 232, 0) 68%); }
+.verificationSlide .practiceGlow { background: radial-gradient(circle, rgba(255, 125, 119, .32), rgba(255, 125, 119, 0) 68%); }
+.practiceTopbar, .practiceFooter { border-color: rgba(247, 245, 238, .17); }
+.practiceContent { align-self: center; display: grid; grid-template-columns: minmax(0, .83fr) minmax(26rem, 1.17fr); gap: clamp(2.5rem, 9vw, 11rem); padding: clamp(1.8rem, 5vh, 4rem) 0; }
+.practiceLead h2 { margin: 0; font-size: clamp(2.5rem, 5vw, 5.45rem); font-weight: 650; letter-spacing: -.065em; line-height: .92; }
+.practiceLead h2 em { color: #f4b64b; font-style: italic; font-weight: 520; }
+.chatAgentSlide .practiceLead h2 em { color: #86d3ff; }
+.verificationSlide .practiceLead h2 em { color: #ff9d95; }
+.practiceLead > p:last-child { max-width: 29rem; margin: 1.3rem 0 0; color: #e5d8bf; font-size: clamp(.92rem, 1.3vw, 1.1rem); line-height: 1.5; }
+.chatAgentSlide .practiceLead > p:last-child { color: #ceddeb; }
+.verificationSlide .practiceLead > p:last-child { color: #f0d1d0; }
+.promptGrid { display: grid; gap: .75rem; }
+.promptGrid article { padding: clamp(.9rem, 1.5vw, 1.25rem); border: 1px solid rgba(255, 247, 233, .17); background: rgba(255, 255, 255, .06); }
+.promptGrid span { color: #f4b64b; font-family: var(--font-geist-mono), monospace; font-size: .68rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+.promptGrid h3 { margin: .6rem 0 .25rem; font-size: clamp(1rem, 1.27vw, 1.2rem); letter-spacing: -.035em; }
+.promptGrid p { margin: 0; color: #eadfc8; font-size: clamp(.78rem, 1.02vw, .91rem); line-height: 1.4; }
+.promptGrid code { display: block; margin-top: .6rem; padding: .52rem .63rem; background: rgba(21, 14, 5, .55); color: #ffe2a2; font-family: var(--font-geist-mono), monospace; font-size: clamp(.69rem, .91vw, .8rem); line-height: 1.35; }
+.comparisonCards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.comparisonCards article { min-height: 21rem; padding: clamp(1.1rem, 1.8vw, 1.55rem); border: 1px solid rgba(238, 248, 255, .18); background: rgba(255, 255, 255, .06); }
+.comparisonCards .agentCard { border-color: rgba(134, 211, 255, .52); background: rgba(134, 211, 255, .1); }
+.comparisonTag { color: #86d3ff; font-family: var(--font-geist-mono), monospace; font-size: .66rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.comparisonCards h3 { margin: 1rem 0 .5rem; font-size: clamp(1.2rem, 1.6vw, 1.55rem); letter-spacing: -.04em; }
+.comparisonCards p { margin: 0; color: #dce9f2; font-size: clamp(.8rem, 1.05vw, .94rem); line-height: 1.45; }
+.comparisonExample { margin: 1.2rem 0; padding: .7rem; border-left: 2px solid #86d3ff; background: rgba(5, 17, 28, .33); color: #eef7ff; font-family: var(--font-geist-mono), monospace; font-size: clamp(.71rem, .94vw, .83rem); line-height: 1.42; }
+.comparisonCards small { color: #9ec5dc; font-size: clamp(.73rem, .93vw, .83rem); line-height: 1.4; }
+.verificationPanel { padding: clamp(1.1rem, 2vw, 1.7rem); border: 1px solid rgba(255, 235, 233, .18); background: rgba(255, 255, 255, .06); }
+.verificationIntro { margin: 0; color: #f3d9d6; font-size: clamp(.9rem, 1.2vw, 1.04rem); }
+.verificationPanel ol { display: grid; gap: .75rem; margin: 1.2rem 0; padding: 0; list-style: none; }
+.verificationPanel li { display: grid; grid-template-columns: 2rem 1fr; gap: .8rem; }
+.verificationPanel li span { color: #ff9d95; font-family: var(--font-geist-mono), monospace; font-size: .68rem; font-weight: 700; }
+.verificationPanel li p { margin: 0; color: #f5e5e2; font-size: clamp(.8rem, 1.05vw, .94rem); line-height: 1.43; }
+.verificationClosing { margin: 0; padding: .85rem .95rem; border-left: 2px solid #ff9d95; color: #ffe5e1; font-size: clamp(.83rem, 1.08vw, .96rem); font-weight: 650; line-height: 1.4; }
+
 @media (max-width: 700px) {
   .overview { padding: 1.35rem 1.35rem 1.1rem; }
   .overviewLead { display: block; }
@@ -593,4 +632,20 @@ h1 {
   .agentCycle article { min-height: auto; padding: .8rem; }
   .agentCycle article p { margin-top: .5rem; font-size: .73rem; }
   .agentReminder { margin-top: .5rem; padding: .65rem .75rem; font-size: .73rem; }
+  .practiceSlide { padding: 1.35rem 1.35rem 1.1rem; }
+  .practiceContent { grid-template-columns: 1fr; gap: 1.3rem; padding: 1.8rem 0; }
+  .practiceLead h2 { font-size: clamp(2.5rem, 12vw, 4.2rem); }
+  .promptGrid { gap: .52rem; }
+  .promptGrid article { padding: .78rem; }
+  .promptGrid h3 { margin: .4rem 0 .2rem; font-size: .93rem; }
+  .promptGrid p, .promptGrid code { font-size: .71rem; }
+  .comparisonCards { gap: .6rem; }
+  .comparisonCards article { min-height: auto; padding: .85rem; }
+  .comparisonCards h3 { margin: .6rem 0 .3rem; font-size: 1rem; }
+  .comparisonCards p, .comparisonCards small, .comparisonExample { font-size: .71rem; }
+  .comparisonExample { margin: .7rem 0; padding: .55rem; }
+  .verificationPanel { padding: .9rem; }
+  .verificationPanel ol { gap: .55rem; margin: .85rem 0; }
+  .verificationPanel li p { font-size: .74rem; }
+  .verificationClosing { padding: .65rem .75rem; font-size: .75rem; }
 }
