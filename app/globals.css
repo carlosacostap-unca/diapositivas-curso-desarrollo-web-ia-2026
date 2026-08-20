@@ -441,6 +441,9 @@ h1 {
 .guideLead h2 { margin: 0; font-size: clamp(2.5rem, 5vw, 5.45rem); font-weight: 650; letter-spacing: -.065em; line-height: .92; }
 .guideLead h2 em { color: #75e5bd; font-style: italic; font-weight: 520; }
 .guideLead > p:last-child { max-width: 28rem; margin: 1.3rem 0 0; color: #c2ded1; font-size: clamp(.92rem, 1.3vw, 1.1rem); line-height: 1.5; }
+.opencodeGui { margin: 1.25rem 0 0; }
+.opencodeGui img { display: block; width: 100%; max-width: 32rem; border: 1px solid rgba(237, 249, 243, .2); box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, .25); }
+.opencodeGui figcaption { margin-top: .5rem; color: #9bbbad; font-family: var(--font-geist-mono), monospace; font-size: .61rem; font-weight: 650; letter-spacing: .08em; text-transform: uppercase; }
 .interfaceMap { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
 .interfaceMap article { min-height: 10.5rem; padding: clamp(1rem, 1.7vw, 1.4rem); border: 1px solid rgba(237, 249, 243, .16); background: rgba(255, 255, 255, .055); }
 .interfaceMap span { color: #75e5bd; font-family: var(--font-geist-mono), monospace; font-size: .68rem; font-weight: 700; letter-spacing: .1em; }
@@ -517,6 +520,8 @@ h1 {
   .opencodeGuide { padding: 1.35rem 1.35rem 1.1rem; }
   .guideContent { grid-template-columns: 1fr; gap: 1.3rem; padding: 1.8rem 0; }
   .guideLead h2 { font-size: clamp(2.5rem, 12vw, 4.2rem); }
+  .opencodeGui { margin-top: 1rem; }
+  .opencodeGui img { max-width: 100%; }
   .interfaceMap { gap: .55rem; }
   .interfaceMap article { min-height: auto; padding: .8rem; }
   .interfaceMap h3 { margin: .6rem 0 .3rem; font-size: .93rem; }

@@ -343,6 +343,10 @@ export default function Home() {
               <p className="setupKicker">Conozcamos la herramienta</p>
               <h2 id="opencode-guide-title">Abrí <em>OpenCode.</em></h2>
               <p>Vamos a familiarizarnos con sus espacios principales antes de empezar a trabajar con nuestro proyecto.</p>
+              <figure className="opencodeGui">
+                <img src="/opencode-gui.webp" alt="Captura de la interfaz de OpenCode con una sesión, panel de navegación y área de conversación" />
+                <figcaption>Referencia visual de la interfaz de OpenCode.</figcaption>
+              </figure>
             </div>
             <div className="interfaceMap" aria-label="Partes principales de la interfaz de OpenCode">
               <article><span>01</span><div><h3>Proyectos y sesiones</h3><p>Desde el lateral podés acceder a tus proyectos y organizar las conversaciones de trabajo.</p></div></article>
