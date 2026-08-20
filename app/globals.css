@@ -279,7 +279,7 @@ h1 {
 }
 
 .presentation { position: relative; width: 100%; overflow: hidden; }
-.slideTrack { display: flex; width: 2100vw; transition: transform 650ms cubic-bezier(0.65, 0, 0.35, 1); }
+.slideTrack { display: flex; width: 2400vw; transition: transform 650ms cubic-bezier(0.65, 0, 0.35, 1); }
 .slide { flex: 0 0 100vw; }
 
 .overview {
@@ -587,6 +587,18 @@ h1 {
 .fileFlow p { margin: 0; color: #d4ebdf; font-size: clamp(.78rem, 1.04vw, .92rem); line-height: 1.42; }
 .fileFlow code { display: inline-block; margin-top: .45rem; padding: .42rem .55rem; background: rgba(1, 16, 10, .55); color: #a8f0d0; font-family: var(--font-geist-mono), monospace; font-size: clamp(.72rem, .95vw, .84rem); font-weight: 700; }
 
+.reflectionSlide { isolation: isolate; position: relative; display: grid; grid-template-rows: auto 1fr auto; min-height: 100svh; overflow: hidden; padding: clamp(1.5rem, 3.5vw, 3.5rem) clamp(1.5rem, 6vw, 7rem); color: #f8f4ec; }
+.journeySlide { background: #1f3944; }.evidenceSlide { background: #3a2938; }.correctionSlide { background: #3a3120; }
+.reflectionSlide::before { content: ""; position: absolute; z-index: -2; inset: 0; opacity: .23; background-image: linear-gradient(rgba(245, 240, 229, .32) 1px, transparent 1px), linear-gradient(90deg, rgba(245, 240, 229, .32) 1px, transparent 1px); background-size: 4rem 4rem; mask-image: linear-gradient(132deg, black, transparent 72%); }
+.reflectionGlow { position: absolute; z-index: -1; width: clamp(23rem, 42vw, 43rem); aspect-ratio: 1; right: -10%; top: -26%; border-radius: 50%; background: radial-gradient(circle, rgba(96, 204, 215, .28), rgba(96, 204, 215, 0) 68%); }.evidenceSlide .reflectionGlow { background: radial-gradient(circle, rgba(220, 128, 197, .3), rgba(220, 128, 197, 0) 68%); }.correctionSlide .reflectionGlow { background: radial-gradient(circle, rgba(243, 190, 77, .32), rgba(243, 190, 77, 0) 68%); }
+.reflectionTopbar, .reflectionFooter { border-color: rgba(248, 244, 236, .17); }
+.reflectionContent { align-self: center; display: grid; grid-template-columns: minmax(0, .8fr) minmax(27rem, 1.2fr); gap: clamp(2.5rem, 9vw, 11rem); padding: clamp(1.8rem, 5vh, 4rem) 0; }
+.reflectionLead h2 { margin: 0; font-size: clamp(2.5rem, 5vw, 5.45rem); font-weight: 650; letter-spacing: -.065em; line-height: .92; }.reflectionLead h2 em { color: #77dce3; font-style: italic; font-weight: 520; }.evidenceSlide .reflectionLead h2 em { color: #e092c8; }.correctionSlide .reflectionLead h2 em { color: #f3be4d; }
+.reflectionLead > p:last-child { max-width: 29rem; margin: 1.3rem 0 0; color: #cce0e1; font-size: clamp(.92rem, 1.3vw, 1.1rem); line-height: 1.5; }.evidenceSlide .reflectionLead > p:last-child { color: #e7cfe0; }.correctionSlide .reflectionLead > p:last-child { color: #e9d9b6; }
+.journeyFlow { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr auto 1fr; align-items: center; gap: .45rem; }.journeyFlow article { min-height: 11rem; padding: .9rem; border: 1px solid rgba(234, 250, 248, .17); background: rgba(255, 255, 255, .06); }.journeyFlow span { color: #77dce3; font-family: var(--font-geist-mono), monospace; font-size: .65rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }.journeyFlow p { margin: .7rem 0 0; color: #d8eeeb; font-size: clamp(.72rem, .92vw, .83rem); line-height: 1.4; }.journeyFlow > i { color: #77dce3; font-size: 1.25rem; font-style: normal; }
+.evidenceCards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }.evidenceCards article { min-height: 17rem; padding: clamp(1.1rem, 1.8vw, 1.55rem); border: 1px solid rgba(255, 237, 249, .18); background: rgba(255, 255, 255, .06); }.evidenceCards article:last-child { border-color: rgba(224, 146, 200, .55); background: rgba(224, 146, 200, .1); }.evidenceCards span { color: #e092c8; font-family: var(--font-geist-mono), monospace; font-size: .66rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }.evidenceCards h3 { margin: 1rem 0 .5rem; font-size: clamp(1.15rem, 1.55vw, 1.45rem); letter-spacing: -.04em; }.evidenceCards p { margin: 0; color: #f0dfe9; font-size: clamp(.8rem, 1.05vw, .94rem); line-height: 1.45; }.evidenceCards code { display: inline-block; margin-bottom: .5rem; padding: .35rem .5rem; background: rgba(28, 10, 25, .5); color: #ffcde9; font-family: var(--font-geist-mono), monospace; font-size: clamp(.7rem, .9vw, .8rem); }.evidenceCards small { display: block; margin-top: 1.2rem; color: #dcbcd2; font-size: clamp(.73rem, .94vw, .84rem); line-height: 1.4; }
+.correctionPanel { padding: clamp(1.1rem, 2vw, 1.7rem); border: 1px solid rgba(255, 244, 216, .18); background: rgba(255, 255, 255, .06); }.correctionPanel ol { display: grid; gap: .82rem; margin: 0; padding: 0; list-style: none; }.correctionPanel li { display: grid; grid-template-columns: 2rem 1fr; gap: .8rem; }.correctionPanel li span { color: #f3be4d; font-family: var(--font-geist-mono), monospace; font-size: .68rem; font-weight: 700; }.correctionPanel li p { margin: 0; color: #f3e6cf; font-size: clamp(.8rem, 1.05vw, .94rem); line-height: 1.43; }.correctionPanel code { padding: .2rem .3rem; background: rgba(36, 25, 4, .55); color: #ffe49e; font-family: var(--font-geist-mono), monospace; font-size: .86em; }.correctionClosing { margin: 1.15rem 0 0; padding: .8rem .95rem; border-left: 2px solid #f3be4d; color: #fff0c9; font-size: clamp(.8rem, 1.04vw, .93rem); line-height: 1.43; }
+
 @media (max-width: 700px) {
   .overview { padding: 1.35rem 1.35rem 1.1rem; }
   .overviewLead { display: block; }
@@ -704,4 +716,5 @@ h1 {
   .fileFlow li { grid-template-columns: 2.1rem 1fr; gap: .65rem; padding: .75rem; }
   .fileFlow h3 { font-size: .94rem; }
   .fileFlow p, .fileFlow code { font-size: .71rem; }
+  .reflectionSlide { padding: 1.35rem 1.35rem 1.1rem; }.reflectionContent { grid-template-columns: 1fr; gap: 1.3rem; padding: 1.8rem 0; }.reflectionLead h2 { font-size: clamp(2.5rem, 12vw, 4.2rem); }.journeyFlow { grid-template-columns: 1fr; gap: .38rem; }.journeyFlow > i { justify-self: center; transform: rotate(90deg); font-size: 1.1rem; }.journeyFlow article { min-height: auto; padding: .72rem; }.journeyFlow p { margin-top: .35rem; font-size: .7rem; }.evidenceCards { gap: .6rem; }.evidenceCards article { min-height: auto; padding: .85rem; }.evidenceCards h3 { margin: .6rem 0 .3rem; font-size: 1rem; }.evidenceCards p, .evidenceCards small { font-size: .72rem; }.correctionPanel { padding: .9rem; }.correctionPanel ol { gap: .55rem; }.correctionPanel li p, .correctionClosing { font-size: .74rem; }.correctionClosing { margin-top: .75rem; padding: .65rem .75rem; }
 }

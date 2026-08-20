@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import QRCode from "qrcode";
 
-const slideCount = 21;
+const slideCount = 24;
 const virtualCampusUrl = "https://www.epixum.com";
 
 export default function Home() {
@@ -496,6 +496,27 @@ export default function Home() {
             <ol className="fileFlow"><li><span>01</span><div><h3>Confirmá y leé</h3><p>Pedí: “Confirmá que la carpeta activa es <code>proyecto-0-primer-ejemplo</code> y mostrame los archivos que contiene.”</p></div></li><li><span>02</span><div><h3>Creá el cuento</h3><p>Pedí: “Creá el archivo <code>cuento-infantil.txt</code> con un cuento corto para niños, con un título y un final amable.”</p></div></li><li><span>03</span><div><h3>Generá el resumen</h3><p>Pedí: “Leé <code>cuento-infantil.txt</code> y creá <code>resumen-y-personajes.txt</code> con un resumen breve y la lista de personajes.”</p></div></li><li><span>04</span><div><h3>Consultá las métricas</h3><p>Pedí: “¿Cuántas palabras y cuántos caracteres tiene <code>cuento-infantil.txt</code>? Mostrá ambos resultados.”</p></div></li></ol>
           </div>
           <footer className="footer labFooter"><p>Crear · Resumir · Analizar</p><div className="slideNumber" aria-label="Diapositiva 21 de 21"><span>21</span><i /></div></footer>
+        </section>
+
+        <section className="slide reflectionSlide journeySlide" aria-labelledby="journey-title">
+          <div className="reflectionGlow" aria-hidden="true" />
+          <header className="topbar reflectionTopbar"><div className="brand" aria-label="Desarrollo web e inteligencia artificial"><span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span><span className="brandText">WEB · IA</span></div><p className="edition">Cierre del Proyecto 0</p></header>
+          <div className="reflectionContent"><div className="reflectionLead"><p className="eyebrow"><span />Diapositiva 22</p><h2 id="journey-title">Reconstruyamos<br />el <em>recorrido.</em></h2><p>El resultado no apareció solo: cada participante del ciclo aportó algo distinto.</p></div><div className="journeyFlow"><article><span>Alumno/a</span><p>Eligió el objetivo, abrió la carpeta y formuló los prompts.</p></article><i>→</i><article><span>Documento fuente</span><p>Aportó el cuento como contenido y contexto.</p></article><i>→</i><article><span>Modelo</span><p>Generó propuestas a partir de las instrucciones.</p></article><i>→</i><article><span>OpenCode + herramientas</span><p>Leyeron y crearon archivos dentro del proyecto.</p></article><i>→</i><article><span>Verificación</span><p>Revisó que el resultado fuera el esperado.</p></article></div></div>
+          <footer className="footer reflectionFooter"><p>Objetivo · Contexto · Acción · Revisión</p><div className="slideNumber" aria-label="Diapositiva 22 de 24"><span>22</span><i /></div></footer>
+        </section>
+
+        <section className="slide reflectionSlide evidenceSlide" aria-labelledby="evidence-title">
+          <div className="reflectionGlow" aria-hidden="true" />
+          <header className="topbar reflectionTopbar"><div className="brand" aria-label="Desarrollo web e inteligencia artificial"><span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span><span className="brandText">WEB · IA</span></div><p className="edition">Cierre del Proyecto 0</p></header>
+          <div className="reflectionContent"><div className="reflectionLead"><p className="eyebrow"><span />Diapositiva 23</p><h2 id="evidence-title">Respuesta no es<br />igual a <em>archivo.</em></h2><p>Una explicación en la conversación no garantiza que el cambio se haya realizado. La evidencia está en los archivos del proyecto.</p></div><div className="evidenceCards"><article><span>Conversación</span><h3>Propuesta del agente</h3><p>“Creé un cuento y preparé un resumen con personajes.”</p><small>Es una afirmación: todavía hay que comprobarla.</small></article><article><span>Carpeta activa</span><h3>Evidencia verificable</h3><p><code>cuento-infantil.txt</code><br /><code>resumen-y-personajes.txt</code></p><small>Abrí ambos archivos y verificá que el contenido esté allí.</small></article></div></div>
+          <footer className="footer reflectionFooter"><p>Escuchar · Abrir · Comprobar</p><div className="slideNumber" aria-label="Diapositiva 23 de 24"><span>23</span><i /></div></footer>
+        </section>
+
+        <section className="slide reflectionSlide correctionSlide" aria-labelledby="correction-title">
+          <div className="reflectionGlow" aria-hidden="true" />
+          <header className="topbar reflectionTopbar"><div className="brand" aria-label="Desarrollo web e inteligencia artificial"><span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span><span className="brandText">WEB · IA</span></div><p className="edition">Cierre del Proyecto 0</p></header>
+          <div className="reflectionContent"><div className="reflectionLead"><p className="eyebrow"><span />Diapositiva 24</p><h2 id="correction-title">Mejorá y<br /><em>comprobá.</em></h2><p>Elegí una afirmación o aspecto mejorable, pedí una corrección concreta y verificá el efecto directamente en el archivo.</p></div><div className="correctionPanel"><ol><li><span>01</span><p><strong>Detectá:</strong> ¿el resumen menciona a todos los personajes? ¿el cuento tiene un final claro?</p></li><li><span>02</span><p><strong>Pedí:</strong> “Actualizá <code>resumen-y-personajes.txt</code> para incluir todos los personajes que aparecen en <code>cuento-infantil.txt</code>.”</p></li><li><span>03</span><p><strong>Comprobá:</strong> abrí el archivo actualizado y contrastalo con el cuento fuente.</p></li></ol><p className="correctionClosing">Corregir no es repetir el pedido: es indicar qué mejorar, dónde y cómo comprobarlo.</p></div></div>
+          <footer className="footer reflectionFooter"><p>Detectar · Corregir · Verificar</p><div className="slideNumber" aria-label="Diapositiva 24 de 24"><span>24</span><i /></div></footer>
         </section>
       </div>
       <nav className="slideNavigation" aria-label="Navegación de diapositivas">
