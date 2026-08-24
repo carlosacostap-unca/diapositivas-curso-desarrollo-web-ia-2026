@@ -599,6 +599,92 @@ h1 {
 .evidenceCards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }.evidenceCards article { min-height: 17rem; padding: clamp(1.1rem, 1.8vw, 1.55rem); border: 1px solid rgba(255, 237, 249, .18); background: rgba(255, 255, 255, .06); }.evidenceCards article:last-child { border-color: rgba(224, 146, 200, .55); background: rgba(224, 146, 200, .1); }.evidenceCards span { color: #e092c8; font-family: var(--font-geist-mono), monospace; font-size: .66rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }.evidenceCards h3 { margin: 1rem 0 .5rem; font-size: clamp(1.15rem, 1.55vw, 1.45rem); letter-spacing: -.04em; }.evidenceCards p { margin: 0; color: #f0dfe9; font-size: clamp(.8rem, 1.05vw, .94rem); line-height: 1.45; }.evidenceCards code { display: inline-block; margin-bottom: .5rem; padding: .35rem .5rem; background: rgba(28, 10, 25, .5); color: #ffcde9; font-family: var(--font-geist-mono), monospace; font-size: clamp(.7rem, .9vw, .8rem); }.evidenceCards small { display: block; margin-top: 1.2rem; color: #dcbcd2; font-size: clamp(.73rem, .94vw, .84rem); line-height: 1.4; }
 .correctionPanel { padding: clamp(1.1rem, 2vw, 1.7rem); border: 1px solid rgba(255, 244, 216, .18); background: rgba(255, 255, 255, .06); }.correctionPanel ol { display: grid; gap: .82rem; margin: 0; padding: 0; list-style: none; }.correctionPanel li { display: grid; grid-template-columns: 2rem 1fr; gap: .8rem; }.correctionPanel li span { color: #f3be4d; font-family: var(--font-geist-mono), monospace; font-size: .68rem; font-weight: 700; }.correctionPanel li p { margin: 0; color: #f3e6cf; font-size: clamp(.8rem, 1.05vw, .94rem); line-height: 1.43; }.correctionPanel code { padding: .2rem .3rem; background: rgba(36, 25, 4, .55); color: #ffe49e; font-family: var(--font-geist-mono), monospace; font-size: .86em; }.correctionClosing { margin: 1.15rem 0 0; padding: .8rem .95rem; border-left: 2px solid #f3be4d; color: #fff0c9; font-size: clamp(.8rem, 1.04vw, .93rem); line-height: 1.43; }
 
+/* Escala de aula: diseñada para proyectores y pantallas grandes. */
+@media (min-width: 701px) {
+  .brandText, .edition, .footer { font-size: .82rem; }
+  .eyebrow { font-size: clamp(.82rem, 1vw, 1rem); }
+
+  .overviewLead, .conceptLead { column-gap: clamp(2rem, 5vw, 6rem); }
+  .setupContent, .diagnosticContent, .workspaceContent, .projectContent,
+  .guideContent, .openProjectContent, .practiceContent, .labContent,
+  .reflectionContent, .classroomContent { gap: clamp(2rem, 5vw, 6rem); }
+
+  .overviewIntro, .classroomIntro > p, .setupLead > p:last-child,
+  .diagnosticLead > p:last-child, .workspaceLead > p:last-child,
+  .projectLead > p:last-child, .guideLead > p:last-child,
+  .openProjectLead > p:last-child, .conceptLead > p:last-child,
+  .practiceLead > p:last-child, .labLead > p:last-child,
+  .reflectionLead > p:last-child {
+    font-size: clamp(1.05rem, 1.35vw, 1.32rem);
+    line-height: 1.48;
+  }
+
+  .overviewCard h3, .conceptCards h3, .setupChecklist h3,
+  .interfaceMap h3, .conceptFlow h3, .promptGrid h3,
+  .fileFlow h3, .applicationMap h3 {
+    font-size: clamp(1.25rem, 1.65vw, 1.62rem);
+  }
+
+  .overviewCard p, .conceptCards p, .setupChecklist p,
+  .diagnosticQuestions p, .workspacePrompt, .workspaceSteps p,
+  .projectPanel > p, .projectSteps p, .interfaceMap p,
+  .openProjectSteps p, .conceptFlow p, .agentCycle article p,
+  .promptGrid p, .comparisonCards p, .verificationPanel li p,
+  .applicationMap p, .applicationNote, .folderCheckPanel li p,
+  .folderCheckWarning, .fileFlow p, .journeyFlow p,
+  .evidenceCards p, .correctionPanel li p, .correctionClosing {
+    font-size: clamp(.96rem, 1.18vw, 1.16rem);
+    line-height: 1.46;
+  }
+
+  .instructorCard ul, .credential, .accessSteps p,
+  .verificationIntro, .verificationClosing, .agentReminder,
+  .evidenceCards small {
+    font-size: clamp(.96rem, 1.18vw, 1.16rem);
+    line-height: 1.45;
+  }
+
+  .classroomUrl, .workspacePanel > code, .setupChecklist code,
+  .folderPath code, .openProjectPath code, .folderCheckPath code,
+  .fileFlow code, .comparisonExample, .evidenceCards code,
+  .promptGrid code {
+    font-size: clamp(.95rem, 1.16vw, 1.14rem);
+  }
+
+  .courseFacts, .cardNumber, .instructorRole, .accessSteps li > span,
+  .setupKicker, .setupChecklist li > span, .diagnosticQuestions span,
+  .workspaceSteps span, .projectSteps span, .interfaceMap span,
+  .openProjectSteps span, .conceptCards span, .flowTag,
+  .agentCycle article span, .promptGrid span, .comparisonTag,
+  .verificationPanel li span, .applicationMap article span,
+  .folderCheckPanel li span, .journeyFlow span, .evidenceCards span,
+  .correctionPanel li span {
+    font-size: .78rem;
+  }
+
+  .overviewCards, .conceptCards { margin-top: clamp(1.5rem, 3vh, 2.5rem); }
+  .overviewCard, .conceptCards article { min-height: 14rem; }
+  .instructorCard { padding: clamp(1.35rem, 2.4vw, 2.1rem); }
+  .instructorCard h3 { font-size: clamp(1.55rem, 2.25vw, 2.25rem); }
+  .accessPanel { padding: clamp(1.3rem, 2.4vw, 2rem); }
+  .setupChecklist { gap: .85rem; }
+  .setupChecklist li { padding: clamp(1.1rem, 1.8vw, 1.55rem); }
+  .diagnosticQuestions { gap: .75rem; }
+  .diagnosticQuestions li { padding: clamp(.9rem, 1.6vw, 1.35rem); }
+
+  .conceptFlow, .agentCycle { gap: .8rem; }
+  .conceptFlow > i, .agentCycle > i { display: none; }
+  .conceptFlow { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .agentCycle { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .conceptFlow article { min-height: 15rem; }
+  .agentCycle article { min-height: 13rem; }
+
+  .journeyFlow { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .65rem; }
+  .journeyFlow > i { display: none; }
+  .journeyFlow article { min-height: 14rem; padding: 1.1rem; }
+  .evidenceCards article { min-height: 19rem; }
+}
+
 @media (max-width: 700px) {
   .overview { padding: 1.35rem 1.35rem 1.1rem; }
   .overviewLead { display: block; }
