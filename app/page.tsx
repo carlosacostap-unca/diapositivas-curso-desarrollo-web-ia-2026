@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import QRCode from "qrcode";
 
-const slideCount = 28;
+const slideCount = 33;
 const virtualCampusUrl = "https://www.epixum.com";
 
 export default function Home() {
@@ -545,6 +545,41 @@ export default function Home() {
           <header className="topbar conceptTopbar"><div className="brand"><span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span><span className="brandText">WEB · IA</span></div><p className="edition">Proyecto 1</p></header>
           <div className="conceptContent"><div className="conceptLead"><p className="eyebrow"><span />Diapositiva 28</p><h2 id="stack-title">Primero local;<br />después <em>conectado.</em></h2><p>Avanzaremos por etapas para validar la experiencia antes de incorporar persistencia en la nube.</p></div><div className="conceptFlow"><article><span className="flowTag">Etapa 1</span><h3>localStorage</h3><p>Las tareas se guardan en el navegador para construir y probar el flujo completo.</p></article><i>→</i><article><span className="flowTag">Etapa 2</span><h3>Supabase</h3><p>Luego migraremos la persistencia a una base de datos.</p></article><i>→</i><article><span className="flowTag">Durante el desarrollo</span><h3>MCP</h3><p>Usaremos MCP para conectar herramientas y acompañar el proceso de desarrollo.</p></article></div></div>
           <footer className="footer conceptFooter"><p>Probar · Persistir · Evolucionar</p><div className="slideNumber" aria-label="Diapositiva 28 de 28"><span>28</span><i /></div></footer>
+        </section>
+
+        <section className="slide proposalSlide proposalIntro" aria-labelledby="proposal-title">
+          <div className="proposalGlow" aria-hidden="true" />
+          <header className="topbar proposalTopbar"><div className="brand"><span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span><span className="brandText">WEB · IA</span></div><p className="edition">Proyecto 1 · Propuesta inicial</p></header>
+          <div className="proposalContent"><div className="proposalLead"><p className="eyebrow"><span />Diapositiva 29</p><h2 id="proposal-title">Diseñar es formular<br />una <em>hipótesis.</em></h2><p>La propuesta inicial de UX/UI y arquitectura nos orienta para empezar. La construiremos, verificaremos y ajustaremos con evidencia durante el proyecto.</p></div><div className="proposalHypothesis"><span>Hipótesis de partida</span><h3>Una persona puede gestionar sus tareas con un recorrido simple, claro y comprobable.</h3><div><p><b>UX/UI</b> organiza la experiencia.</p><p><b>Arquitectura</b> organiza cómo funciona.</p><p><b>Verificación</b> nos ayuda a decidir qué ajustar.</p></div></div></div>
+          <footer className="footer proposalFooter"><p>Proponer · Construir · Verificar · Ajustar</p><div className="slideNumber" aria-label="Diapositiva 29 de 33"><span>29</span><i /></div></footer>
+        </section>
+
+        <section className="slide proposalSlide proposalExperience" aria-labelledby="experience-title">
+          <div className="proposalGlow" aria-hidden="true" />
+          <header className="topbar proposalTopbar"><div className="brand"><span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span><span className="brandText">WEB · IA</span></div><p className="edition">UX/UI · Pantalla común</p></header>
+          <div className="proposalContent proposalSingle"><div className="proposalLead"><p className="eyebrow"><span />Diapositiva 30</p><h2 id="experience-title">Una pantalla,<br /><em>cuatro acciones.</em></h2><p>La lista de tareas será el espacio común desde el que se recorre toda la experiencia.</p></div><div className="taskScreen"><div className="screenHeader"><span>Mis tareas</span><button type="button" tabIndex={-1}>+ Nueva tarea</button></div><div className="taskStates"><article><span>Crear</span><p>Ingresar título y descripción.</p></article><article><span>Ver</span><p>Consultar tareas pendientes y completadas.</p></article><article><span>Editar</span><p>Modificar datos o cambiar el estado.</p></article><article><span>Eliminar</span><p>Quitar una tarea que ya no es necesaria.</p></article></div><div className="stateLegend"><b>Estados principales:</b><span>Pendiente</span><i>→</i><span>Completada</span><i>→</i><span>Eliminada</span></div></div></div>
+          <footer className="footer proposalFooter"><p>Crear · Ver · Editar · Eliminar</p><div className="slideNumber" aria-label="Diapositiva 30 de 33"><span>30</span><i /></div></footer>
+        </section>
+
+        <section className="slide proposalSlide proposalArchitecture" aria-labelledby="architecture-title">
+          <div className="proposalGlow" aria-hidden="true" />
+          <header className="topbar proposalTopbar"><div className="brand"><span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span><span className="brandText">WEB · IA</span></div><p className="edition">Arquitectura · Capas</p></header>
+          <div className="proposalContent"><div className="proposalLead"><p className="eyebrow"><span />Diapositiva 31</p><h2 id="architecture-title">Una experiencia,<br /><em>tres capas.</em></h2><p>Separarlas nos permite comprender qué ve la persona, qué reglas aplica la aplicación y dónde quedan guardados los datos.</p></div><div className="architectureStack"><article><span>01 · Interfaz</span><h3>Lo que la persona ve y usa</h3><p>Formulario, lista, botones, mensajes y estados visibles.</p></article><i aria-hidden="true">↓</i><article><span>02 · Lógica de tareas</span><h3>Las reglas del gestor</h3><p>Crear, validar, actualizar, completar y eliminar tareas.</p></article><i aria-hidden="true">↓</i><article><span>03 · Persistencia</span><h3>El lugar de los datos</h3><p>Primero localStorage; luego Supabase.</p></article></div></div>
+          <footer className="footer proposalFooter"><p>Interfaz · Lógica · Persistencia</p><div className="slideNumber" aria-label="Diapositiva 31 de 33"><span>31</span><i /></div></footer>
+        </section>
+
+        <section className="slide proposalSlide proposalData" aria-labelledby="data-title">
+          <div className="proposalGlow" aria-hidden="true" />
+          <header className="topbar proposalTopbar"><div className="brand"><span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span><span className="brandText">WEB · IA</span></div><p className="edition">Arquitectura · Datos</p></header>
+          <div className="proposalContent proposalSingle"><div className="proposalLead"><p className="eyebrow"><span />Diapositiva 32</p><h2 id="data-title">El mismo flujo;<br /><em>otro destino.</em></h2><p>La interfaz y la lógica se mantienen. Lo que cambia es dónde viajan y permanecen las tareas.</p></div><div className="dataCompare"><article><span>Etapa 1 · localStorage</span><h3>Datos en el navegador</h3><div className="dataFlow"><b>Interfaz</b><i>→</i><b>Lógica</b><i>→</i><b>localStorage</b></div><p>Ideal para validar el recorrido sin depender de un servicio externo.</p></article><article><span>Etapa 2 · Supabase</span><h3>Datos en la nube</h3><div className="dataFlow"><b>Interfaz</b><i>→</i><b>Lógica</b><i>→</i><b>Supabase</b></div><p>Permite persistir datos en una base de datos y preparar la siguiente evolución.</p></article></div></div>
+          <footer className="footer proposalFooter"><p>El flujo se conserva · La persistencia evoluciona</p><div className="slideNumber" aria-label="Diapositiva 32 de 33"><span>32</span><i /></div></footer>
+        </section>
+
+        <section className="slide proposalSlide proposalMcp" aria-labelledby="mcp-title">
+          <div className="proposalGlow" aria-hidden="true" />
+          <header className="topbar proposalTopbar"><div className="brand"><span className="brandMark" aria-hidden="true"><span>&lt;</span><i /><span>/&gt;</span></span><span className="brandText">WEB · IA</span></div><p className="edition">Desarrollo asistido · MCP</p></header>
+          <div className="proposalContent"><div className="proposalLead"><p className="eyebrow"><span />Diapositiva 33</p><h2 id="mcp-title">MCP conecta<br />a <em>OpenCode.</em></h2><p>MCP forma parte del proceso de desarrollo: no es una capa de la aplicación que usará la persona.</p></div><div className="mcpPanel"><div className="mcpConnection"><article><span>OpenCode</span><p>El agente trabaja sobre el proyecto.</p></article><i aria-hidden="true">⇄</i><article><span>MCP</span><p>Conecta herramientas autorizadas durante el desarrollo.</p></article><i aria-hidden="true">⇄</i><article><span>Servicios</span><p>Por ejemplo, Supabase cuando corresponda.</p></article></div><div className="decisionSplit"><p><b>Se mantiene:</b> CRUD demostrable, experiencia individual y separación de capas.</p><p><b>Se revisa:</b> layout, campos, textos, detalles visuales y decisiones que validemos en el camino.</p></div></div></div>
+          <footer className="footer proposalFooter"><p>Desarrollar con herramientas · Revisar con evidencia</p><div className="slideNumber" aria-label="Diapositiva 33 de 33"><span>33</span><i /></div></footer>
         </section>
       </div>
       <nav className="slideNavigation" aria-label="Navegación de diapositivas">
